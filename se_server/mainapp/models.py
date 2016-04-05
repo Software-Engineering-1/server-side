@@ -21,8 +21,8 @@ class Personal(models.Model):
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, default='M', null=True)
     dob=models.DateField(null=False)
     address=models.CharField(max_length=100,null=False,default='The person has not specified their address yet')
-    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
-    phone_number = models.CharField(max_length=15,validators=[phone_regex], blank=True)
+    phone_regex = RegexValidator(regex=r'^[0-9]{10}$', message="Phone number must be entered in the format: '9999999999'.")
+    phone_number = models.CharField(max_length=10,validators=[phone_regex], blank=True)
     resume_url=models.CharField(max_length=100,null=True)
     def __str__(self):
         return self.user_details.username

@@ -9,7 +9,7 @@ from django.shortcuts import redirect                   #Needed to redirect
 from chatbot.views import personalinfo
 from mainapp.views import mainView
 from .models import UserContact
-
+from mainapp.models import Personal
 
 
 
@@ -23,7 +23,9 @@ from .models import UserContact
 @csrf_exempt
 def homepage(request):
     if( request.session.get('user',None)):  #Check session object for user
-        return redirect(mainView)           #exists, so redirect to profile
+        p=Personal.objects.all().filter(user_details=User.objects.all().filter(username=request.session['user'])[0])
+        if(len(p))!=0:
+            return redirect(mainView)           #exists, so redirect to profile
     if(request.method=="POST"):             #This post is used to handle feedback on website
         data=request.POST                   #Get the submitted fields like name,email and their message
         name=data['name']
@@ -51,6 +53,7 @@ def homepage(request):
 
 @csrf_exempt
 def login_user(request):
+
     if(request.method=="POST"): #Means it is a post request
         data=request.POST       #Obtain data which was sent in the body. This is a dictionary
         if(data['title'])=='LOGIN': #I've 2 forms on same page.I've given different values to same key title to distinguish
@@ -60,6 +63,10 @@ def login_user(request):
             if(user is not None):  #Yes. It is valid. So log the user in
                 login(request,user) #Login . From this point. Can use request.user to get the user
                 request.session['user']=user.username   #This is for remembering user across sessions
+                if( request.session.get('user',None)):  #Check session object for user
+                    p=Personal.objects.all().filter(user_details=User.objects.all().filter(username=request.session['user'])[0])
+                    if(len(p))!=0:
+                        return redirect(mainView)           #exists, so redirect to profile
                 return redirect(personalinfo)   #Important. Use this for redirecting him to different page after login
             else:   #He has entered wrong username/password. Load the login page itself again.
                 template = loader.get_template('authentication/login.html')

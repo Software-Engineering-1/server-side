@@ -48,7 +48,7 @@
           {
 
                       var f=document.getElementById("finalform");
-                      f.innerHTML+="<div class='form-group'><p><label class='teal-text'><h4 class='blue-grey-text text-darken-1'>"+s+"</h4></label></p>"+"<input class='form-control' type='text' id='"+key+"' value='"+val+"'/>";
+                      f.innerHTML+="<div class='form-group'><p><label class='teal-text'><h4 class='blue-grey-text text-darken-1'>"+s+"</h4></label></p>"+"<input class='form-control' name='"+key+"' type='text' id='"+key+"' value='"+val+"'/>";
           }
           var log = document.getElementById(outputid);
           switch (s)
@@ -112,6 +112,8 @@
                       g="F";
                       s=5;
                   }
+                  var f=document.getElementById("finalform");
+                  f.innerHTML+="<div class='form-group' style='visibility:hidden'><p><label class='teal-text'><h4 class='blue-grey-text text-darken-1'>"+s+"</h4></label></p>"+"<input class='form-control' name='gender' type='text' id='gender' value='"+g+"'/>";
                   break;
               }
               case 5:{
@@ -203,12 +205,12 @@
   <hr>
       <div class = "left" style="overflow:scroll; height:600px; overflow-x:hidden;">
         <div style="padding: 50px">
-          <form id="finalform" class="white-text">
-
-          </form>
+          <form id="finalform" class="white-text" action="/chat/personal" method="post">
+            {%   csrf_token %}
           <div>
-                <button type="button" class="red darken-1 waves-effect waves-light btn" id="bttn" onclick="finalsave();" style="visibility:hidden">Submit</button>
+                <input type="submit" class="red darken-1 waves-effect waves-light btn" id="bttn"  style="visibility:hidden"/>
             </div>
+          </form>
         </div>
       </div>
       <div class="right" style="padding:50px">

@@ -6,6 +6,16 @@
 </head>
 <body>
     Placeholder page.Things are working,my dear {{ user }}
+    {% for job in jobs %}
+        {{ job.location }} <br>
+        {{ job.industry }} <br>
+        {{ job.position }} <br>         <!-- See schema for all values-->
+    {% endfor %}
+    {{ user.username }} <br>            <!-- These three values comes from user table,remaining from personal-->
+    {{ user.first_name }}<br>
+    {{ user.last_name }}<br>
+    {{ user.email }}<br>
+    {{ details.gender }}<br>            <!-- See schema for all values -->
 <form method="post" action="test">
     <input type="submit" value="Logout"/>
 </form>
