@@ -1,0 +1,577 @@
+Skill ID,Area,Name
+1,Access servers,Lightweight directory access protocol LDAP servers
+2,Access servers,Remote access servers
+3,Access software,Citrix software
+4,Access software,Access management software
+5,Access software,Remote access software
+6,Access software,IBM Tivoli Access Management TAM
+7,Accounting software,Client billing software
+8,Accounting software,Intuit QuickBooks software
+9,Accounting software,ProfitCents software
+10,Accounting software,Sage 50 Accounting
+11,Administration software,Cisco Systems CiscoWorks software
+12,Administration software,Element management software
+13,Administration software,Netreo OmniCenter
+14,Administration software,Riverbed Technology software
+15,Administration software,SolarWinds software
+16,Administration software,Software distribution management software
+17,Analytical or scientific software,ACL Audit Exchange
+18,Analytical or scientific software,Guidance Software EnCase Enterprise
+19,Analytical or scientific software,SAS software
+20,Analytical or scientific software,WizSoft WizRule
+21,Analytical or scientific software,Simulation program with integrated circuit emphasis SPICE
+22,Analytical or scientific software,StataCorp Stata
+23,Analytical or scientific software,The MathWorks MATLAB
+24,Analytical or scientific software,Minitab software
+25,Analytical or scientific software,Structure prediction software
+26,Analytical or scientific software,Rice Simulator for ILP Multiprocessors RSIM
+27,Analytical or scientific software,SPSS software
+28,Analytical or scientific software,Discrete event simulation software
+29,Analytical or scientific software,Root cause analysis software
+30,Analytical or scientific software,Test data generator software
+31,Analytical or scientific software,Dynamic modeling software
+32,Analytical or scientific software,Virtual Battlespace 2 VBS2
+33,Analytical or scientific software,HEC-1
+34,Application server software,Oracle WebLogic Server
+35,Application server software,Red Hat WildFly
+36,Application server software,Oracle Application Server
+37,Application server software,Microsoft Windows Server
+38,Application server software,Oracle Solaris Zones
+39,Application server software,Oracle WebLogic
+40,Authentication server software,Microsoft Forefront Identify Manager
+41,Authentication server software,Akoura SmartToken
+42,Authentication server software,Diameter
+43,Authentication server software,IBM Tivoli Identity Management TIM
+44,Authentication server software,Remote authentication dial-in user service RADIUS software
+45,Backup or archival software,System and data disaster recovery software
+46,Backup or archival software,Veritas NetBackup
+47,Backup or archival software,Computer Associates ArcServ Backup
+48,Backup or archival software,Acronis Recovery Expert
+49,Backup or archival software,BMC Software Control-M software
+50,Backup or archival software,Oracle Data Guard
+51,Backup or archival software,Backup and archival software
+52,Bridge software,Network bridge software
+53,Broadband aggregators,Broadband aggregation equipment
+54,Business intelligence and data analysis software,IBM Cognos Impromptu
+55,Business intelligence and data analysis software,Qlik Tech QlikView
+56,Business intelligence and data analysis software,Tableau software
+57,Business intelligence and data analysis software,MicroStrategy software
+58,Business intelligence and data analysis software,Business intelligence system software
+59,Business intelligence and data analysis software,Oracle Business Intelligence Enterprise Edition
+60,Calendar and scheduling software,Maintenance scheduling software
+61,Calendar and scheduling software,Scheduling software
+62,Camera based vision systems for automated data collection,Image capture devices
+63,Camera based vision systems for automated data collection,Real time motion capture systems
+64,Central processing unit CPU processors,Graphics processing unit GPU
+65,Central processing unit CPU processors,Multi-core central processing unit CPU
+66,Cinematographic cameras,Pan-tilt-zoom cameras
+67,Clustering software,Clustermatic
+68,Clustering software,Parallel systems software
+69,Clustering software,Cluster server software
+70,Clustering software,Oracle Real Application Cluster RAC
+71,Communications server software,IBM Domino
+72,Communications server software,Email management software
+73,Compact disks CDs,Magneto optical discs
+74,Compiler and decompiler software,Command interpreters
+75,Compiler and decompiler software,Just-in-time compiler
+76,Compiler and decompiler software,Stage compiler
+77,Compiler and decompiler software,Threaded code compiler
+78,Compiler and decompiler software,Time sharing option TSO software
+79,Compiler and decompiler software,Greenhills Ada compilers
+80,Compiler and decompiler software,Low-level virtual machine LLVM compilers
+81,Compiler and decompiler software,Polaris parallelizing compilers
+82,Compliance software,Intrax ProcedureNet
+83,Compliance software,Paisley Cardmap
+84,Compliance software,Sage HandiSoft HandiLedger
+85,Compliance software,TrendTracker Compliance Solution
+86,Computer aided design CAD software,Computer aided design and drafting CADD software
+87,Computer aided design CAD software,Dassault Systemes CATIA software
+88,Computer aided design CAD software,OrCAD Capture
+89,Computer aided design CAD software,Spectra Quest software
+90,Computer aided design CAD software,PTC Creo Parametric
+91,Computer aided design CAD software,Autodesk AutoCAD software
+92,Computer aided design CAD software,SignCAD Systems SignCAD
+93,Computer aided design CAD software,Computer assisted software engineering CASE software
+94,Computer aided design CAD software,Autodesk Revit
+95,Computer aided design CAD software,Bentley MicroStation
+96,Computer aided manufacturing CAM software,
+97,Computer based training software,
+98,Computer servers,File servers
+99,Computer servers,Web servers
+100,Computer servers,Domain name servers DNS
+101,Computer servers,Mail transport servers
+102,Computer servers,Network-attached storage NAS equipment
+103,Computer servers,Application servers
+104,Configuration management software,IBM Rational ClearCase
+105,Configuration management software,Perforce Helix software
+106,Configuration management software,Puppet
+107,Configuration management software,Revision control software
+108,Configuration management software,HyperSpace software
+109,Configuration management software,IBM Rational Apex
+110,Configuration management software,Perforce Software Configuration Management System
+111,Configuration management software,Automated installation software
+112,Configuration management software,Logical partition LPAR software
+113,Configuration management software,VMWare software
+114,Configuration management software,Deployment software
+115,Configuration management software,Patch and update management software
+116,Configuration management software,Visible Razor
+117,Contact center software,Avaya software
+118,Content delivery networking equipment,High-speed networking testbeds
+119,Content workflow software,Emerald Software Group Emerald Green Office
+120,Content workflow software,Workflow software
+121,Customer relationship management CRM software,Oracle Eloqua software
+122,Data base management system software,Apache Hadoop
+123,Data base management system software,MongoDB
+124,Data base management system software,MySQL software
+125,Data base management system software,NoSQL software
+126,Data base management system software,Sybase SQL Server
+127,Data base management system software,Oracle DBMS
+128,Data base management system software,Relational database management system software
+129,Data base management system software,NoSQL
+130,Data base management system software,Sybase Replication Server
+131,Data base management system software,Apache Cassandra
+132,Data base management system software,Sybase software
+133,Data base management system software,Distributed database management software
+134,Data base management system software,Oracle procedural language/structured query language PL/SQL
+135,Data base management system software,Teradata Database
+136,Data base reporting software,Microsoft SQL Server Reporting Services
+137,Data base reporting software,ReCrystallize Crystal Reports
+138,Data base reporting software,SAP BusinessObjects Crystal Reports
+139,Data base reporting software,Oracle Business Intelligence Suite
+140,Data base reporting software,Network reporting software
+141,Data base reporting software,Oracle SQL Plus
+142,Data base reporting software,SAP Crystal Reports
+143,Data base reporting software,SAP Business Intelligence
+144,Data base user interface and query software,Microsoft Access
+145,Data base user interface and query software,Oracle software
+146,Data base user interface and query software,Structured query language SQL
+147,Data base user interface and query software,dBASE Plus
+148,Data base user interface and query software,Transact-SQL
+149,Data base user interface and query software,SAP BusinessObjects Desktop Intelligence
+150,Data base user interface and query software,Software asset management SAM software
+151,Data base user interface and query software,Microsoft SQL Server
+152,Data base user interface and query software,Microsoft SQL Server software
+153,Data base user interface and query software,Oracle JDBC
+154,Data base user interface and query software,Teradata Active Enterprise Data Warehouse
+155,Data base user interface and query software,FileMaker Pro software
+156,Data base user interface and query software,IEA Software Emerald
+157,Data base user interface and query software,Autodesk Buzzsaw
+158,Data conversion software,
+159,Data mining software,Data extraction software
+160,Data mining software,WizSoft WizWhy
+161,Data mining software,Google Analytics
+162,Data mining software,
+163,Desktop calculator,10-key calculators
+164,Desktop communications software,CrossTec NetOp Remote Control
+165,Desktop communications software,Remote control software
+166,Desktop communications software,Stac Software ReachOut
+167,Desktop communications software,Symantec pcAnywhere
+168,Desktop communications software,BroadSoft BroadWorks
+169,Desktop communications software,Secure shell SSH software
+170,Desktop publishing software,Microsoft Publisher
+171,Desktop publishing software,Adobe Systems Adobe FrameMaker
+172,Desktop publishing software,Adobe Systems Adobe InDesign
+173,Desktop publishing software,QuarkXPress
+174,Development environment software,Microsoft Visual Basic
+175,Development environment software,Apache Maven
+176,Development environment software,C
+177,Development environment software,Integrated development environment IDE software
+178,Development environment software,Adobe Systems Adobe ActionScript
+179,Development environment software,IBM Rational Rose XDE Developer
+180,Development environment software,Symantec Visual Cafe
+181,Development environment software,IBM Rational Rose
+182,Development environment software,Verilog
+183,Development environment software,Systems and applications migration software
+184,Development environment software,Eclipse software
+185,Development environment software,Microsoft .NET Framework
+186,Development environment software,Prolog
+187,Development environment software,Microsoft Visual Basic Scripting Edition VBScript
+188,Development environment software,Scheme programming language
+189,Development environment software,Advanced business application programming ABAP
+190,Development environment software,Adobe Systems Adobe Creative Suite software
+191,Development environment software,Simple DirectMedia Layer SDL
+192,Development environment software,Unity Technologies Unity
+193,Development environment software,National Instruments LabVIEW
+194,Device drivers or system software,Microsoft DirectX
+195,Digital camcorders or video cameras,Digital video cameras
+196,Digital cameras,
+197,Digital telephones,Voice over internet protocol VoIP systems
+198,Digital testers,Bit error rate testers BERT
+199,Document management software,Adobe Systems Adobe Acrobat software
+200,Document management software,Virage VS Archive
+201,Document management software,Document management system software
+202,Document management software,Adobe Systems Adobe Acrobat
+203,Document management software,Adobe Systems Adobe Acrobat Pro Extended
+204,Document management software,Adobe Systems Adobe LifeCycle ES
+205,Electronic mail software,IBM Notes
+206,Electronic mail software,Microsoft Exchange Server
+207,Electronic mail software,Microsoft Outlook
+208,Enterprise application integration software,Extensible markup language XML
+209,Enterprise application integration software,IBM WebSphere
+210,Enterprise application integration software,Progress Sonic ESB
+211,Enterprise application integration software,SAP NetWeaver BW
+212,Enterprise application integration software,Oracle Fusion Middleware
+213,Enterprise application integration software,WebFOCUS software
+214,Enterprise application integration software,IBM WebSphere MQ
+215,Enterprise application integration software,IBM InfoSphere DataStage
+216,Enterprise application integration software,Microsoft SQL Server Integration Services SSIS
+217,Enterprise application integration software,Enterprise application integration EAI software
+218,Enterprise application integration software,SAP Netweaver
+219,Enterprise application integration software,SAP R/3 software
+220,Enterprise resource planning ERP software,Lawson software
+221,Enterprise resource planning ERP software,Oracle Hyperion software
+222,Enterprise resource planning ERP software,Oracle PeopleSoft software
+223,Enterprise resource planning ERP software,SAP software
+224,Enterprise resource planning ERP software,Microsoft Dynamics software
+225,Enterprise resource planning ERP software,Oracle JD Edwards EnterpriseOne
+226,Enterprise resource planning ERP software,SAP Business Objects software
+227,Enterprise resource planning ERP software,Oracle PeopleSoft Financials
+228,Enterprise resource planning ERP software,SAP BusinessObjects software
+229,Enterprise resource planning ERP software,Agile Product Lifecyle Management PLM
+230,Enterprise resource planning ERP software,Made2Manage software
+231,Enterprise resource planning ERP software,Microsoft Dynamics NAV
+232,Enterprise system management software,IBM Power Systems software
+233,Enterprise system management software,Microsoft Systems Management Server
+234,Enterprise system management software,Splunk Enterprise
+235,Enterprise system management software,ArcSight Enterprise Threat and Risk Management
+236,File versioning software,Version control software
+237,Filesystem software,Computer forensic software
+238,Filesystem software,File server software
+239,Financial analysis software,Bi3 Financial Statement Fraud Analysis
+240,Financial analysis software,CaseWare International IDEA SmartAnalyzer
+241,Financial analysis software,Oracle E-Business Suite Financials
+242,Financial analysis software,Thomson Reuters risk management software
+243,Financial analysis software,Delphi software
+244,Financial analysis software,Cost estimation software
+245,Firewall network security equipment,Firewall equipment
+246,Fixed computer gaming console,Video gaming equipment
+247,Flash memory storage card,Flash disks
+248,Frequency analyzers,Spectrum analyzers
+249,Graphical user interface development software,Basis BBx VisualPRO/5
+250,Graphical user interface development software,Graphical user interfaces GUI
+251,Graphical user interface development software,Waikato Environment for Knowledge Analysis Weka
+252,Graphical user interface development software,Graphical user interface GUI design software
+253,Graphical user interface development software,Graphical user interface GUI builder software
+254,Graphical user interface development software,Microsoft Expression Blend
+255,Graphics or photo imaging software,Microsoft Visio
+256,Graphics or photo imaging software,Adobe Systems Adobe Fireworks
+257,Graphics or photo imaging software,Adobe Systems Adobe Photoshop software
+258,Graphics or photo imaging software,Corel CorelDraw Graphics Suite
+259,Graphics or photo imaging software,Adobe Systems Adobe Flash
+260,Graphics or photo imaging software,Graphics pipelines
+261,Graphics or photo imaging software,Open Graphics Library OpenGL
+262,Graphics or photo imaging software,Three-dimensional 3D graphics software
+263,Graphics or photo imaging software,Adobe Systems Adobe FreeHand
+264,Graphics or photo imaging software,Balsamiq Studios Balsamiq Mockups
+265,Graphics or photo imaging software,OpenGL
+266,Graphics tablets,Graphics workstations
+267,Hard disk arrays,Network storage arrays
+268,Hard disk arrays,Redundant array of independent disks RAID systems
+269,Hard disk drives,
+270,Helpdesk or call center software,Help desk software
+271,Helpdesk or call center software,Ticket information tracking software
+272,High capacity removable media drives,Universal serial bus USB flash drives
+273,High end computer servers,Distributed heterogeneous computers
+274,High end computer servers,High-performance cluster HPC computers
+275,High end computer servers,Massively parallel processors MPP
+276,High end computer servers,Render farms
+277,High end computer servers,Workstations
+278,High end computer servers,Directory servers
+279,Human resources software,Human resource management software HRMS
+280,Human resources software,Oracle Learning Management OLM software
+281,Industrial control software,Process Control System Software
+282,Industrial control software,RTA Fleet Management
+283,Information retrieval or search software,LexisNexis software
+284,Information retrieval or search software,Data validation software
+285,Integrated circuit testers,In circuit emulators ICE
+286,Integrated circuit testers,Logic analyzers
+287,Integrated services digital network ISDN testers,Integrated services digital network ISDN analyzers
+288,Interferometers,Optical spectrum analyzers
+289,Internet browser software,Web browser software
+290,Internet directory services software,Active directory software
+291,Internet directory services software,Domain name system DNS software
+292,Internet directory services software,Microsoft Active Directory
+293,Internet directory services software,Berkeley Internet Domain Name BIND software
+294,Internet directory services software,Network directory services software
+295,Internet protocol IP multimedia subsystem software,Multiprotocol Label Switching MPLS
+296,Internet protocol IP multimedia subsystem software,Open Shortest Path First OSPF
+297,Internet protocol IP multimedia subsystem software,Session Initiation Protocol SIP
+298,Internet protocol IP multimedia subsystem software,Voice over internet protocol VoiP system software
+299,Inventory management software,
+300,LAN software,Local area network LAN software
+301,Laser fax machine,Laser facsimile machines
+302,Laser printers,Computer laser printers
+303,Laser printers,Wide format printers
+304,License management software,
+305,Loudspeakers,Free-field speakers
+306,Mainframe computers,Mainframe operating systems
+307,Mainframe computers,
+308,Map creation software,ESRI ArcGIS software
+309,Map creation software,Geographic information system GIS software
+310,Map creation software,ESRI ArcView
+311,Materials requirements planning logistics and supply chain software,LSA Visual Easy Lean
+312,Medical software,Healthcare common procedure coding system HCPCS software
+313,Medical software,Medical condition coding software
+314,Medical software,Medical procedure coding software
+315,Medical software,Epic Systems software
+316,Metadata management software,CA Erwin Data Modeler
+317,Metadata management software,Informatica Corporation PowerCenter
+318,Metadata management software,Oracle Master Data Management MDM Suite
+319,Metadata management software,SAP Master Data Management MDM
+320,Metadata management software,Data mapping software
+321,Metadata management software,Data modeling software
+322,Metadata management software,Visual Paradigm DB Visual ARCHITECT
+323,Metadata management software,Perforce software
+324,Microprocessors,Microcomputers
+325,Mobile phones,Smart phones
+326,Multimedia projectors,Stereographic projectors
+327,Multimedia projectors,Video projectors
+328,Multimeters,Network multimeters
+329,Music or sound editing software,Digidesign Pro Tools software
+330,Network analyzers,Asynchronous transfer mode ATM analyzers
+331,Network analyzers,Local area network LAN analyzers
+332,Network analyzers,Network connectivity testers
+333,Network analyzers,Wide area network WAN analyzers
+334,Network cable management panel assembly,Network cabling systems
+335,Network channel or data service units,Channel banks
+336,Network channel or data service units,Network channel service units CSU or data service units DSU
+337,Network conferencing software,Microsoft Sharepoint
+338,Network interface cards,Network interface cards NIC
+339,Network management or monitoring device,Packet analysis equipment
+340,Network monitoring software,Nagios
+341,Network monitoring software,Network intrusion prevention systems NIPS software
+342,Network monitoring software,Snort
+343,Network monitoring software,Wireshark
+344,Network monitoring software,Packet analysis software
+345,Network monitoring software,"Network, hardware, and software auditing software"
+346,Network operating system enhancement software,Compuware dynaTrace
+347,Network operating system enhancement software,"Network, server and operating system optimization software"
+348,Network operating system enhancement software,Silver Peak software
+349,Network operating system enhancement software,Wide area network WAN optimization software
+350,Network operation system software,Novell network software
+351,Network operation system software,IBM z/OS operating systems
+352,Network routers,Computer network routers
+353,Network security and virtual private network VPN equipment software,Content filter software
+354,Network security and virtual private network VPN equipment software,Firewall software
+355,Network security and virtual private network VPN equipment software,Network intrusion detection software
+356,Network security and virtual private network VPN equipment software,Virtual private networking VPN software
+357,Network security and virtual private network VPN equipment software,Cryptographic key management software
+358,Network security or virtual private network VPN management software,Virtual private network VPN software
+359,Network security or virtual private network VPN management software,Intrusion prevention system IPS software
+360,Network security or virtual private network VPN management software,Risk assessment software
+361,Network security or virtual private network VPN management software,Websense Data Loss Prevention
+362,Network security or virtual private network VPN management software,Database security software
+363,Network security or virtual private network VPN management software,Intrusion detection system IDS software
+364,Network security or virtual private network VPN management software,Network and system vulnerability assessment software
+365,Network security or virtual private network VPN management software,Network security auditing software
+366,Network service concentrators or hubs,Intelligent hubs
+367,Network switches,Computer network switches
+368,Network switches,Local area network LAN switches
+369,Network switches,Voice switches
+370,Network switches,Wide area network WAN switches
+371,Network traffic controller,Wireless network controllers
+372,Notebook computers,Laptop computers
+373,Notebook computers,
+374,Object or component oriented development software,R
+375,Object or component oriented development software,C++
+376,Object or component oriented development software,Oracle Java
+377,Object or component oriented development software,Python
+378,Object or component oriented development software,Distributed component object model DCOM software
+379,Object or component oriented development software,Objective C
+380,Object or component oriented development software,Microsoft ActiveX
+381,Object or component oriented development software,Practical extraction and reporting language Perl
+382,Object or component oriented development software,Advanced business application programming ABAP
+383,Object or component oriented development software,Sybase PowerBuilder
+384,Object or component oriented development software,jQuery
+385,Object or component oriented development software,C#
+386,Object or component oriented development software,Objective-C
+387,Object or component oriented development software,Component-based Scalable Logical Architecture CSLA
+388,Object or component oriented development software,Microsoft Visual C#
+389,Object oriented data base management software,Hibernate ORM
+390,Object oriented data base management software,Microsoft Visual FoxPro
+391,Object oriented data base management software,PostgreSQL software
+392,Object oriented data base management software,Object database management system ODBMS software
+393,Object oriented data base management software,Transact-SQL
+394,Office suite software,Corel WordPerfect Office Suite
+395,Office suite software,Microsoft Office software
+396,Office suite software,Microsoft Works
+397,Operating system software,UNIX
+398,Operating system software,Bourne Shell
+399,Operating system software,KornShell
+400,Operating system software,Linux
+401,Operating system software,Oracle Solaris
+402,Operating system software,Red Hat Enterprise Linux
+403,Operating system software,Sun Microsystems Solaris
+404,Operating system software,VME PowerPC VxWorks
+405,Operating system software,Job control language JCL
+406,Operating system software,Hewlett Packard HP-UX
+407,Operating system software,Cisco Systems IOS
+408,Operating system software,VxWorks software
+409,Operating system software,Microsoft Windows
+410,Operating system software,Cisco Systems IOS software
+411,Optical character reader OCR or scanning software,Nuance OmniPage Professional
+412,Optical network management software,
+413,Pattern design software,Diagramming software
+414,Pattern design software,Flow chart software
+415,Pattern design software,Omni Group OmniGraffle
+416,Personal digital assistant PDAs or organizers,Personal digital assistants PDA
+417,Photocopiers,Photocopying equipment
+418,Pick or place robots,Articulated robots
+419,Pick or place robots,Mobile robots
+420,Platform interconnectivity software,Migration software
+421,Point of sale POS software,Smart card management software
+422,Portal server software,Apache HTTP Server
+423,Power meters,Fiber optic power meters
+424,Presentation software,Google Slides
+425,Presentation software,Microsoft PowerPoint
+426,Presentation software,Apple iWork Keynote
+427,Program testing software,Debugging software
+428,Program testing software,Hewlett Packard LoadRunner
+429,Program testing software,Low-level debugger software
+430,Program testing software,Symbolic debugger software
+431,Program testing software,Compatibility testing software
+432,Program testing software,Defect tracking software
+433,Program testing software,Usability testing software
+434,Program testing software,Segue SilkPerformer
+435,Program testing software,System testing software
+436,Program testing software,Computer Associates Log Analyzer
+437,Program testing software,Database testing software
+438,Program testing software,Conformance and validation testing software
+439,Program testing software,Fault testing software
+440,Program testing software,Unit testing software
+441,Program testing software,Source code editor software
+442,Project management software,Oracle Primavera Enterprise Project Portfolio Management software
+443,Project management software,Microsoft Project
+444,Project management software,Microsoft SharePoint software
+445,Project management software,Microsoft SharePoint
+446,Project management software,Atlassian JIRA
+447,Project management software,Realization Streamliner
+448,Project management software,The Gordian Group PROGEN Online
+449,Protocol analyzers,
+450,Radio frequency data communication equipment,Radio frequency RF antennas
+451,Reflectometers,Time domain reflectometers
+452,Requirements analysis and system architecture software,Unified modeling language UML
+453,Requirements analysis and system architecture software,AcmeStudio
+454,Requirements analysis and system architecture software,Popkin System Architect
+455,Requirements analysis and system architecture software,Wright software
+456,Requirements analysis and system architecture software,Capacity planning software
+457,Requirements analysis and system architecture software,Network architecture design software
+458,Requirements analysis and system architecture software,Requirements management software
+459,Requirements analysis and system architecture software,Database capacity planning software
+460,Requirements analysis and system architecture software,IBM Rational Requisite Pro
+461,Sales and marketing software,Google AdWords
+462,Scanners,Computer data input scanners
+463,Scanners,Computer scanners
+464,Scanners,Laser scanners
+465,Server load balancer,Load balancers
+466,Server load balancer,Network server load balancers
+467,Spreadsheet software,Google Sheets
+468,Spreadsheet software,Microsoft Excel
+469,Stage or projection or studio lighting system,Lighting grids
+470,Still cameras,35 millimeter cameras
+471,Storage area network SAN switch,Storage area network SAN switches
+472,Storage networking software,Network storage software
+473,Storage networking software,Storage area network SAN software
+474,Storage networking software,Storage management software
+475,Switch or router software,Border Gateway Protocol BGP
+476,Switch or router software,Cisco Systems Cisco Web Cache Communication Protocol WCCP
+477,Switch or router software,Transparent Interconnection of Lots of Links TRILL
+478,Switch or router software,Virtual Router Redundancy Protocol VRRP
+479,Tablet computers,Graphics tablets
+480,Tape arrays,Quarter inch cartridge QIC tapes
+481,Tape arrays,Tape libraries
+482,Time accounting software,WorkForce Software EmpCenter Time and Attendance
+483,Time accounting software,Time reporting software
+484,Time accounting software,Kronos Workforce Timekeeper
+485,Transaction security and virus protection software,McAfee software
+486,Transaction security and virus protection software,Symantec security software
+487,Transaction security and virus protection software,Virus scanning software
+488,Transaction security and virus protection software,CA eTrust
+489,Transaction security and virus protection software,Encryption software
+490,Transaction security and virus protection software,Penetration testing software
+491,Transaction security and virus protection software,Honeypot
+492,Transaction security and virus protection software,McAfee VirusScan
+493,Transaction security and virus protection software,Ping Identity software
+494,Transaction security and virus protection software,Stack smashing protection SSP software
+495,Transaction server software,Customer information control system CICS software
+496,Transaction server software,Microsoft Internet Information Service IIS
+497,Transaction server software,Sun Microsystems Sun ONE
+498,Transaction server software,Web server software
+499,Transaction server software,Customer information control system CICS
+500,Transaction server software,Customer information control system CCIS
+501,Transaction server software,IBM Middleware
+502,Transaction server software,Object Management Group Object Request Broker
+503,Video conferencing software,Videoconferencing software
+504,Video creation and editing software,TechSmith Camtasia
+505,Video creation and editing software,Video editing software
+506,Video creation and editing software,Adobe Systems Adobe After Effects
+507,Video creation and editing software,Apple Final Cut Pro
+508,Video creation and editing software,Apple iMovie
+509,Video creation and editing software,MAXON CINEMA 4D software
+510,Video creation and editing software,Adobe Systems Adobe AfterEffects
+511,Video creation and editing software,Autodesk 3ds Max
+512,Video creation and editing software,Sound development software
+513,Videoconferencing systems,Videoconferencing equipment
+514,Voice data video cable tester,Communication cable testers
+515,WAN switching software and firmware,Wide area network WAN software
+516,Web page creation and editing software,Adobe Systems Adobe Dreamweaver
+517,Web page creation and editing software,CoffeeCup software
+518,Web page creation and editing software,Microsoft FrontPage
+519,Web page creation and editing software,Plug-in file software
+520,Web page creation and editing software,Adobe Systems Adobe Flash Player
+521,Web page creation and editing software,Adobe Systems Adobe Macromedia HomeSite
+522,Web platform development software,Drupal
+523,Web platform development software,Hypertext markup language HTML
+524,Web platform development software,LAMP Stack
+525,Web platform development software,Spring Framework
+526,Web platform development software,Enterprise JavaBeans
+527,Web platform development software,PHP: Hypertext Preprocessor
+528,Web platform development software,Extensible stylesheet language transformations XSLT
+529,Web platform development software,JavaScript
+530,Web platform development software,Apache Tomcat
+531,Web platform development software,Dynamic hypertext markup language DHTML
+532,Web platform development software,Asynchronous JavaScript and XML AJAX
+533,Web platform development software,AJAX
+534,Web platform development software,Ruby on Rails
+535,Web platform development software,Node.js
+536,WLAN wireless access network equipment and components,Wireless access points WAP
+537,WLAN wireless access network equipment and components,Wireless local area network WLAN controllers
+538,Word processing software,Google Docs
+539,Word processing software,Microsoft Word
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,

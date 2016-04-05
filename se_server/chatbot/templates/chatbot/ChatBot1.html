@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>JustTheJob</title>
+
+    <!-- CSS  -->
+    <link href="{{ STATIC_URL }}min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}min/custom-min.css" type="text/css" rel="stylesheet" >
+    <style type="text/css">
+    	.left{
+          width : 50%;
+          display: inline-block;
+          margin-left:auto; 
+          margin-right: auto;
+        }
+        .right{
+          display: inline-block;
+          margin-left:auto; 
+          margin-right: auto;
+        }  
+    </style>
+    <script type="text/javascript">
+      var s=0;
+      function getRadioValue(name)
+          {
+              console.log("HERE");
+              for (var i = 0; i < document.getElementsByName(name).length; i++)
+              {
+                  if (document.getElementsByName(name)[i].checked)
+                  {
+                      return document.getElementsByName(name)[i].value;
+                  }
+              }
+          }
+
+      function ask(inputid, outputid)
+      {
+          var textin = document.getElementById(inputid);
+          var reply = textin.value;
+          if(reply.length==0 && s!=4){
+              response="nigga enter something";
+              return;
+          }
+          function addit(s,val,key)
+          {
+
+                      var f=document.getElementById("finalform");
+                      f.innerHTML+="<div class='form-group'><p><label class='teal-text'><h4 class='blue-grey-text text-darken-1'>"+s+"</h4></label></p>"+"<input class='form-control' type='text' id='"+key+"' value='"+val+"'/>";
+          }
+          var log = document.getElementById(outputid);
+          switch (s)
+          {
+              case 0:{
+                  names=reply.split(" ");
+                  if(names.length==1) {
+                      response = names[0] + " is your first name. What's your last name?";
+                      fname = names[0];
+                      addit("First name",fname,"fname");
+                      s=1;
+                  }
+                  else{
+                      response="May I know your email?";
+                      fname=names[0];
+                      addit("First name",fname,"fname");
+                      lname=names[1];
+                      addit("Last name",lname,"lname");
+                      s=2;
+                  }
+                  break;
+              }
+              case 1:{
+                  response="May I know your email?";
+                  lname=reply;
+                  addit("Last name",lname,"lname");
+                  s=2;
+                  break;
+              }
+              case 2:{
+                  var p=/(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)/;
+                  if(p.test(reply))
+                  {
+                      s=3;
+                      response="What is your zipcode?";
+                      email=reply;
+                      addit("Email",email,"email");
+                  }
+                  else{
+                      response="You have entered an invalid email. Enter again";
+                  }
+                  break;
+              }
+              case 3:{
+
+                  response="Are you a student? Answer with a Yes or No.";
+                  document.getElementById("textin").style.display='none';
+                  s=4;
+                  document.getElementById("kai").style.display='block';
+                  
+                  zipCode=reply;
+                  addit("Zipcode",zipCode,"zipcode");
+                  break;
+              }
+              case 4:{
+                  var geocoder = new google.maps.Geocoder();
+
+                  geocoder.geocode({ 'address': zipCode  }, function (result, status) {
+
+
+                  var addressComponent = result[0]['address_components'];
+
+                  var stateQueryable = $.grep(addressComponent, function (x) {
+                    return $.inArray('administrative_area_level_1', x.types) != -1;
+                  });
+                  var countryQueryable = $.grep(addressComponent, function (x) {
+                    return $.inArray('country', x.types) != -1;
+                  });
+
+                  if (stateQueryable.length) {
+                      stateName = stateQueryable[0]['long_name'];
+
+                      var cityQueryable = $.grep(addressComponent, function (x) {
+                      return $.inArray('locality', x.types) != -1;
+                  });
+
+                  if (cityQueryable.length) {
+                      cityName = cityQueryable[0]['long_name'];
+                  }
+                  if (countryQueryable.length) {
+                      country = countryQueryable[0]['long_name'];
+                  }
+                }
+                //alert(stateName);
+                //alert(cityName);
+                //alert(country);
+              });
+                 // alert(fname+lname+email+zipCode);
+
+                  document.getElementById("textin").style.display='block';
+                  document.getElementById("kai").style.display='none';
+                  
+                  if(getRadioValue("student")=="yes"){//reply == 'Yes' || reply == 'yes' || reply == 'YES'){
+                      response = 'Which School or College/University?';
+                      s=5;
+                  }
+                  else{
+                      response = 'What is your job title?';
+                      s=9;
+                  }
+                  break;
+              }
+              case 5:{
+                  response = 'What is your Start Year?';
+                  College = reply;
+                  addit("College",College,"college");
+                  s=6;
+                  break;
+              }
+              case 6:{
+                  response = 'End year/Expected end year?';
+                  startyear = reply;
+                  addit("Start Year",startyear,"startyear");
+                  s=7;
+                  break;
+              }
+              case 7:{
+                  response = 'all done. Type anything to be amazed';
+                  endyear = reply;
+                  addit("End Year",endyear,"endyear");
+                  s=8;
+                  break;
+              }
+              case 8:{
+                  alert("First Name:"+fname+"\nLast Name:"+lname+"\nCountry:"+country+"\nState:"+stateName+"\nCity:"+cityName+"\nCollege:"+College+"\nStart Year:"+startyear+"\nEnd year:"+endyear);
+                  s=12;
+                  break;
+              }
+              case 9:{
+                  jobtitle=reply;
+                  response = 'Which company?';
+                  addit("Job Title",jobtitle,"jobtitle");
+                  s=10;
+                  break;
+              }
+              case 10:{
+                  company=reply;
+                  addit("Company",company,"company");
+                  response= 'all done. Type anything to be amazed';
+                  var b=document.getElementById("bttn");
+                  b.style.visibility="visible";
+                  s=11;
+
+                  break;
+              }
+              case 11:{
+                  alert("First Name:"+fname+"\nLast Name:"+lname+"\nCountry:"+country+"\nState:"+stateName+"\nCity:"+cityName+"\nCompany:"+company+"\nJob title:"+jobtitle);
+                  response = 'Are you over 18. Yes or No?';
+                  s=12;
+                  break;
+              }
+              case 12:{
+
+              }
+          }
+
+          textin.value="";
+          log.innerHTML="<h5><p>"+response+"</p></h5>";
+          }
+          function finalsave(){
+              var fname = document.getElementById("fname").value;
+              var lname = document.getElementById("lname").value;
+              var email = document.getElementById("email").value;
+              var zipcode = document.getElementById("zipcode").value;
+              if(College=""){
+                  var jobtitle = document.getElementById("jobtitle").value;
+                  var company = document.getElementById("company").value;
+                  alert(fname+lname+email+zipCode+jobtitle+company);
+              }
+              else{
+                  var college = document.getElementById("college").value;
+                  var startyear = document.getElementById("startyear").value;
+                  var endyear = document.getElementById("endyear").value;
+                  alert(fname+lname+email+zipCode+college+startyear+endyear);
+              }
+          }
+    </script>
+</head>
+<body id="top" class="scrollspy default_color" style="overflow-y:hidden;">
+	 <div class="navbar-fixed">
+	    <nav id="nav_f" class="default_color" role="navigation">
+	        <div class="container">
+	            <div class="nav-wrapper">
+	               <a href="#" id="logo-container" class="brand-logo center">JustTheJob</a>
+	            </div>
+	        </div>
+	    </nav>
+	</div>
+  <hr>
+      <div class = "left" style="overflow:scroll; height:600px; overflow-x:hidden;">
+        <div style="padding: 50px">
+          <form id="finalform" class="white-text">
+                    
+          </form>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary" id="bttn" onclick="finalsave();" style="visibility:hidden">Submit</button>
+        </div>
+      </div>
+      <div class="right" style="padding:50px">
+        <div class="card-panel hoverable white">
+          <div class="card-content teal-text">
+            <div class="row">
+              <center>
+                <div id="log" >
+                  <h5><p class="teal-text">What is your name?</p></h5>
+                </div>
+              </center>
+              <p>
+                <center><input id="textin" type="text" class="teal-text" name=input style="width:300px;" /></center> <br>
+                <div align="center">
+                  <button id="btn" class="red darken-1 waves-effect waves-light btn-large" onclick="ask('textin','log')">Send</button>
+                </div>
+                <br>
+                <div id="kai" style="display:none">
+                  <center>
+
+                      <p>
+                        <input type="radio" name="student" value="yes" id="st"><label>Yes</label>
+                      </p>
+                        
+                      <p>
+                        <input type="radio" name="student" value="no" id="jo"><label>No</label>
+                      </p>
+
+                  </center>
+                </div>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
