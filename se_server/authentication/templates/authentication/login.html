@@ -93,7 +93,7 @@
 	            <div class="nav-wrapper">
 	            <a href="#" id="logo-container" class="brand-logo">JustTheJob</a>
 	                <ul class="right hide-on-med-and-down">
-			            <form action="/authentication/login" method="post" autocomplete="off">
+			            <form action="/authentication/login" method="post" autocomplete="false">
 			              <li>
 			              	&nbsp;&nbsp;&nbsp;&nbsp;
 			              </li>
@@ -127,7 +127,7 @@
       <div class="card white hoverable center-align" style="width: 600px;" align="center" id = "card">
         <div class="card-content">
         <center><span class="teal-text">Not a member? Register Here.</span></center>
-        <form action="/authentication/login" method="post" onsubmit="return validate()" autocomplete="off">
+        <form action="/authentication/login" method="post" onsubmit="return validate()" autocomplete="false">
           <input type="text" id="username" name="username" placeholder="Enter Username">
           <input type="email" id="email" name="email" placeholder="Enter Email ID"> 
           <input type="password" id="password" name="password" onkeyup="return passwordChanged()" placeholder="Enter Password">  <label id="strength"></label>
