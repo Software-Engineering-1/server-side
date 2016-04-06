@@ -16,14 +16,9 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-
+from android import views
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    #The pages associated with chatbot
-    url(r'chat/',include('chatbot.urls')),
-    url(r'main/',include('mainapp.urls')),
+    url(r'login',views.login,name="LOGIN"),
 
-    url(r'^',include('authentication.urls')),
-    url(r'android',include('android.urls')),
     #url(r'register','authentication.views.register',name="Register"),
 ]
