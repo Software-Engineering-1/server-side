@@ -1,23 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>JustTheJob</title>
+
+    <!-- CSS  -->
+    <link href="{{ STATIC_URL }}min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}min/custom-min.css" type="text/css" rel="stylesheet" >
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/materialize.min.js"></script>
+    <style>
+        .linkButton {
+            background: none;
+            border: none;
+            color: #0066ff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .left{
+            width : 65%;
+            display: inline-block;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        .right{
+            display: inline-block;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        #profile{
+            width: 800px;
+        }
+    </style>
+    <script>
+
+    </script>
 </head>
-<body>
+<body id="top" class="scrollspy default_color">
+
+    <!--
     Placeholder page.Things are working,my dear {{ user }}
     {% for job in jobs %}
         {{ job.location }} <br>
         {{ job.industry }} <br>
-        {{ job.position }} <br>         <!-- See schema for all values-->
+        {{ job.position }} <br>
     {% endfor %}
-    {{ user.username }} <br>            <!-- These three values comes from user table,remaining from personal-->
+    {{ user.username }} <br>
     {{ user.first_name }}<br>
     {{ user.last_name }}<br>
     {{ user.email }}<br>
-    {{ details.gender }}<br>            <!-- See schema for all values -->
-<form method="post" action="test">
-    <input type="submit" value="Logout"/>
-</form>
+    {{ details.gender }}<br>
+    -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#">Edit Profile</a></li>
+        <li><a href="#">Help</a></li>
+        <li role="separator" class="divider"></li>
+        <li>
+            <form method="post" action="test">
+                <input type="submit" value="Logout" class="linkButton"/>
+            </form>
+            <br>
+        </li>
+    </ul>
+
+    <div class="navbar-fixed">
+	    <nav id="nav_f" class="default_color" role="navigation">
+            <div class="nav-wrapper">
+	            <a href="#" id="logo-container" class="brand-logo">&nbsp; JustTheJob</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{user.first_name}} {{user.last_name}}<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                </ul>
+	            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+	    </nav>
+	</div>
+    <hr>
+    <div class="left" id="div1">
+        <div class="card small" id="profile">
+            <div class="card-content teal-text">
+                <span class="card-title black-text">Name: {{ user.first_name }} {{user.last_name}}</span>
+                <p>faggot
+                faggot
+                faggot</p>
+            </div>
+        </div>
+    </div>
+    <div class="right" style="padding: 20px">
+        {% for job in jobs %}
+            <div class="card hoverable white">
+                <div class="card-content teal-text">
+                    <span class="card-title black-text">{{ job.industry }}</span>
+                    <p>{{job.position}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="#" class="teal-text">Apply</a>
+                    <a href="#" class="red-text">Dismiss</a>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
 </body>
 </html>
