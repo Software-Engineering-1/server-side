@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'mainapp.apps.MainappConfig',
     'authentication.apps.AuthenticationConfig',
     'chatbot.apps.ChatbotConfig',
+    'android.apps.AndroidConfig'
 ]
 
 MIDDLEWARE_CLASSES = [
