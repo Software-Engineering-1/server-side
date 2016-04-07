@@ -35,23 +35,26 @@
             background-color: white;
             height: auto;
         }
-        #exform{
+        #exform,#edform,#projform{
              position: absolute;
             top: 20%;
             left: 40%;
-            background-color: antiquewhite;
+            background-color: teal;
 
         }
         .blur{
             -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -o-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px);
+            -moz-filter: blur(10px);
+            -o-filter: blur(10px);
+            -ms-filter: blur(10px);
+            filter: blur(10px);
         }
 
     </style>
     <script>
+        function clickbut(){
+            document.getElementById("logoutbut").click();
+        }
         function showexform(){
             document.getElementById("div1").className+=" "+"blur";
             document.getElementById("div2").className+=" "+"blur";
@@ -59,9 +62,27 @@
 
 
         }
+        function showedform(){
+            document.getElementById("div1").className+=" "+"blur";
+            document.getElementById("div2").className+=" "+"blur";
+            document.getElementById("edform").style.display="block";
+        }
+        function showprojform(){
+            document.getElementById("div1").className+=" "+"blur";
+            document.getElementById("div2").className+=" "+"blur";
+            document.getElementById("projform").style.display="block";
+        }
+        function expcancel(){
+            document.getElementById("div1").className="left";
+            document.getElementById("div2").className="right";
+            document.getElementById("exform").style.display="none";
+        }
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
             selectYears: 15 // Creates a dropdown of 15 years to control year
+          });
+        $(document).ready(function() {
+            $('select').material_select();
           });
 
     </script>
@@ -86,10 +107,7 @@
         <li><a href="#">Help</a></li>
         <li role="separator" class="divider"></li>
         <li>
-            <form method="post" action="test">
-                <input type="submit" value="Logout" class="linkButton"/>
-            </form>
-            <br>
+            <li><a onclick="clickbut()">Logout</a></li>
         </li>
     </ul>
 
@@ -135,10 +153,15 @@
                 <button id="btn" class="red darken-1 waves-effect waves-light btn" onclick="showexform()">Add Position</button>
             </div>
             <div id="educationtab" class="col s12">
-
+                <h4>PES University</h4>
+                <h5>Degree: Bachelor's Degree</h5>
+                <h6>Field Of Study: Computer Science</h6>
+                <h6 class="teal-text">Dates Attended: 6-08-2013 - Present</h6>
+                <h5>CGPA: 9.003</h5>
+                <button id="edbtn" class="red darken-1 waves-effect waves-light btn" onclick="showedform()">Add Education</button>
             </div>
             <div id="projecttab" class="col s12">
-
+                <button id="projbtn" class="red darken-1 waves-effect waves-light btn" onclick="showprojform()">Add Project</button>
             </div>
         </div>
 
@@ -161,39 +184,122 @@
             </div>
         {% endfor %}
     </div>
-    <div id="exform" style="display: none;">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="company_name" type="text" class="validate">
-                        <label for="company_name">Company Name</label>
-                    </div>
+    <div id="exform" class="white-text" style="display: none;">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="company_name" type="text" class="validate">
+                    <label for="company_name">Company Name</label>
                 </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="job_title" type="text" class="validate">
-                        <label for="job_title">Job Title</label>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="job_title" type="text" class="validate">
+                    <label for="job_title">Job Title</label>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <label for="TimePeriod">Time Period</label>
-                        <br><br>
-                        <input type="date" id="sdate" class="datepicker">
-                        -
-                        <input type="date" class="datepicker">
-                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="TimePeriod">Time Period</label>
+                    <br><br>
+                    <input type="date" id="sdate" class="datepicker">
+                    -
+                    <input type="date" class="datepicker">
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="description" class="materialize-textarea"></textarea>
-                        <label for="description">description</label>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="description" class="materialize-textarea"></textarea>
+                    <label for="description">description</label>
                 </div>
-                <div class="row" align="center">
-                    <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
-                    <button class="red darken-1 waves-effect waves-light btn">Cancel</button>
+            </div>
+            <div class="row" align="center">
+                <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
+                <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div id="projform" class="white-text" style="display: none; width: 400px;">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="project_name" type="text" class="validate">
+                    <label for="project_name">Name</label>
                 </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="TimePeriod">Date</label>
+                    <br><br>
+                    <input type="date" id="projdate" class="datepicker">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="project_url" type="url" class="validate">
+                    <label for="project_url">Project URL</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="proj_description" class="materialize-textarea"></textarea>
+                    <label for="proj_description">Description</label>
+                </div>
+            </div>
+            <div class="row" align="center" class="col s12">
+                <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
+                <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div id="edform" class="white-text" style="display: none;">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="school_name" type="text" class="validate">
+                    <label for="school_name">School Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="TimePeriod">Dates Attended</label>
+                    <br><br>
+                    <input type="date" id="eddate" class="datepicker">
+                    -
+                    <input type="date" class="datepicker">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select>
+                        <option value="High School">High School</option>
+                        <option value="Pre-University">Pre-University</option>
+                        <option value="Bachelor's Degree">Bachelor's Degree</option>
+                        <option value="Master's Degree">Master's Degree</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="field_of_study" type="text" class="validate">
+                    <label for="field_of_study">Field Of Study</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="cgpa_percentage" type="text" class="validate">
+                    <label for="cgpa_percentage">CGPA/Percentage</label>
+                </div>
+            </div>
+            <div class="row" align="center">
+                <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
+                <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
+            </div>
+        </form>
+    </div>
+        <div id = "logout" style="display: none;">
+            <form method="post" action="test">
+                <input type="submit" id="logoutbut" value="Logout"/>
             </form>
         </div>
 </body>
