@@ -8,6 +8,7 @@ from django.http import HttpResponse
 from mainapp.models import Personal,JobPosting
 from django.contrib.auth.models import User
 
+
 #Just a placeholder to redirect to after login process is done
 @csrf_exempt
 def mainView(request):

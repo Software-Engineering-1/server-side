@@ -7,7 +7,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE','se_server.settings')
 import django
 django.setup()
 from mainapp.models import Skill,JobPosting
-
+"""
 def get_mappings(filename):
     mappings={}
     with open(filename) as csvfile:
@@ -75,14 +75,49 @@ def populate_jobpostings(filename):
             j.skills.add(*skills)
             j.save()
             print("SAVED:",str(j))
+"""
+
+
+def check_validity(filename):
+    with open(filename) as csvfile:
+        reader=csv.reader(csvfile)
+        count=0
+        wrong=0
+        total=0
+        for row in reader:
+            if(not count):
+                count+=1
+                continue
+            skills=row[3].split(",")
+            skills=list(map(lambda x:x.strip(),skills))
+            total+=len(skills)
+            for skill in skills:
+                #Model.objects.get(fieldname__contains=value)
+                s=Skill.objects.all().filter(name=skill)
+                if(not s):
+                    s=Skill.objects.all().filter(name__icontains=skill)
+                    if(len(s)==0):
+                        #print(skill,"is not present")
+                        wrong+=1
+                    else:
+                        print(s[0],"+++",skill)
+                else:
+                    #print(s[0],"____",skill)
+                    pass
+
+        print(wrong,total)
+
 
 if(__name__=="__main__"):
 
     os.environ.setdefault('DJANGO_SETTINGS_MODULE','justthejob.settings')
     import django
     django.setup()
-    mappings=get_mappings("skills_big.csv")
+    #mappings=get_mappings("skills_big.csv")
     #populate_skills("skills_kai.csv")
-    populate_jobpostings("job_posting.csv")
+    #populate_jobpostings("job_posting.csv")
+    check_validity("job.csv")
+
+
 
 
