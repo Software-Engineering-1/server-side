@@ -10,18 +10,27 @@ from django.contrib.auth.models import User
 
 
 #Just a placeholder to redirect to after login process is done
+
+
+
+def check_permissions(main_function):
+    def _performchecks(request):
+        if(not request.session.get('user',None)):
+            from authentication.views import login_user
+            return redirect(login_user)
+        else :
+            p=Personal.objects.all().filter(user_details=User.objects.all().filter(username=request.session['user']))
+            if(len(p)==0):
+                from chatbot.views import personalinfo
+                return redirect(personalinfo)
+            else:
+                return main_function(request)
+    return _performchecks
+
+
 @csrf_exempt
+@check_permissions
 def mainView(request):
-    #login checks
-    if(not request.session.get('user',None)):
-       from authentication.views import login_user
-       return redirect(login_user)
-    else :
-       p=Personal.objects.all().filter(user_details=User.objects.all().filter(username=request.session['user']))
-       if(len(p)==0):
-           from chatbot.views import personalinfo
-           return redirect(personalinfo)
-    #check for post
     if(request.method=="POST"):
         from authentication.views import homepage
         request.session.pop("user",None)

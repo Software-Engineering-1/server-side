@@ -94,43 +94,4 @@ def login_user(request):
         context={'error':0}                                         #No error needs to be shown
         return HttpResponse(template.render(context,request))       #Render the HTML page given the template and context
 
-@csrf_exempt
-def register(request):
-    if(request.POST):
-        data=request.POST
-        username=data['username']
-        password=data['password']
-        email=data['email']
-
-        try:
-            u=User.objects.create_user(username,email,password)
-        except Exception as e:
-            print(e)
-            template = loader.get_template('authentication/homepage.html')
-            context={'error':1}
-            return HttpResponse(template.render(context,request))
-        else:
-            u.save()
-            user=authenticate(username=username,password=password)
-            login(request,user)
-            return redirect(personalinfo)
-    else:
-        template = loader.get_template('authentication/register.html')
-        context={'error':0}
-        return HttpResponse(template.render(context,request),status=200)
-
-@csrf_exempt
-def fp(request):
-    if(request.method=="POST"):
-        f=request.FILES['myfile']
-        for s in f.chunks():
-            print(s)
-        return HttpResponse("HI")
-    else:
-        template = loader.get_template('authentication/fp.html')
-        context={}
-        return HttpResponse(template.render(context,request),status=200)
-
-
-
 

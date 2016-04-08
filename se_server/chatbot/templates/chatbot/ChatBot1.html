@@ -24,6 +24,9 @@
     </style>
     <script type="text/javascript">
       var s=0;
+      {% if error == 1 %}
+          alert("You have entered invalid details.Please enter again");
+      {% endif %}
       function getRadioValue(name)
           {
               console.log("HERE");
