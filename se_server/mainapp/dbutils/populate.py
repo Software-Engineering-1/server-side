@@ -107,6 +107,57 @@ def check_validity(filename):
 
         print(wrong,total)
 
+def populate_skills(filename):
+    with open(filename) as csvfile:
+        reader=csv.reader(csvfile)
+        next(reader)
+        for row in reader:
+            print(row[0]+"-"+row[1]+"-"+row[2])
+            if(row[2].strip()!=""):
+                try:
+                    s=Skill(id=int(row[0]),name=row[2])
+                    s.save()
+                except:
+                    pass
+
+def populate_jobpostings(filename):
+    with open(filename) as csvfile:
+        reader=csv.reader(csvfile)
+        next(reader)
+        count=0
+        for row in reader:
+            count+=1
+            skill_set=[]
+            skills=row[3].split(",")
+            skills=list(map(lambda x:x.strip(),skills))
+            for skill in skills:
+                s=Skill.objects.all().filter(name=skill)
+                if(s):
+                    #print(s[0])
+                    skill_set.append(s[0])
+                if(not s):
+                    s=Skill.objects.all().filter(name__icontains=skill)
+                    if(len(s)==0):
+                        pass
+                        print("Skipping "+skill)
+                    else:
+                        #print(s[0])
+                        skill_set.append(s[0])
+            organization=row[0]
+            location=row[1]
+            industry=row[2]
+            position=row[4]
+            duration=row[5]
+            stipend=row[6]
+            url=row[8]
+            type=row[9]
+            j=JobPosting(id=count,organization=organization,location=location,industry=industry,link=url,type=type,stipend=int(stipend),position=position)
+            j.save()
+            j.skills.add(*skill_set)
+            j.save()
+            print(str(j))
+
+
 
 if(__name__=="__main__"):
 
@@ -115,8 +166,13 @@ if(__name__=="__main__"):
     django.setup()
     #mappings=get_mappings("skills_big.csv")
     #populate_skills("skills_kai.csv")
-    #populate_jobpostings("job_posting.csv")
-    check_validity("job.csv")
+    populate_jobpostings("joble.csv")
+    #
+    #for s in Skill.objects.all():
+     #   s.delete()
+    #populate_skills("skills_kai.csv")
+
+
 
 
 
