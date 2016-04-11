@@ -8,7 +8,8 @@
 
     <!-- CSS  -->
     <link href="{{ STATIC_URL }}min/plugin-min.css" type="text/css" rel="stylesheet">
-    <link href="{{ STATIC_URL }}min/custom-min.css" type="text/css" rel="stylesheet" >
+    <link href="{{ STATIC_URL }}min/custom-min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/materialize.min.js"></script>
     <style>
@@ -19,30 +20,35 @@
             text-decoration: underline;
             cursor: pointer;
         }
-        .left{
-            width : 65%;
+
+        .left {
+            width: 65%;
             display: inline-block;
-            margin-left:auto;
+            margin-left: auto;
             margin-right: auto;
         }
-        .right{
+
+        .right {
             display: inline-block;
-            margin-left:auto;
+            margin-left: auto;
             margin-right: auto;
         }
-        #div1{
+
+        #div1 {
             width: 800px;
             background-color: white;
             height: auto;
         }
-        #exform,#edform,#projform{
-             position: absolute;
+
+        #exform, #edform, #projform, #pubform {
+            position: absolute;
             top: 20%;
             left: 40%;
             background-color: teal;
 
         }
-        .blur{
+
+        .blur {
             -webkit-filter: blur(10px);
             -moz-filter: blur(10px);
             -o-filter: blur(10px);
@@ -52,44 +58,66 @@
 
     </style>
     <script>
-        function clickbut(){
+        {% if submitted == True %}
+            alert("Successfully submitted");
+        {% elif submitted == 2 %}
+
+        {% else %}
+            alert("fail: " + "{{ submitted }}");
+        {% endif %}
+        function clickbut() {
             document.getElementById("logoutbut").click();
         }
-        function showexform(){
-            document.getElementById("div1").className+=" "+"blur";
-            document.getElementById("div2").className+=" "+"blur";
-            document.getElementById("exform").style.display="block";
+        function removeSkill(name) {
+            var skillName = document.getElementById("skillName");
+            skillName.value = name;
+            document.getElementById("removeForm").click();
+        }
+        function showexform() {
+            document.getElementById("div1").className += " " + "blur";
+            document.getElementById("div2").className += " " + "blur";
+            document.getElementById("exform").style.display = "block";
 
 
         }
-        function showedform(){
-            document.getElementById("div1").className+=" "+"blur";
-            document.getElementById("div2").className+=" "+"blur";
-            document.getElementById("edform").style.display="block";
+        function showedform() {
+            document.getElementById("div1").className += " " + "blur";
+            document.getElementById("div2").className += " " + "blur";
+            document.getElementById("edform").style.display = "block";
         }
-        function showprojform(){
-            document.getElementById("div1").className+=" "+"blur";
-            document.getElementById("div2").className+=" "+"blur";
-            document.getElementById("projform").style.display="block";
+        function showpubform() {
+            document.getElementById("div1").className += " " + "blur";
+            document.getElementById("div2").className += " " + "blur";
+            document.getElementById("pubform").style.display = "block";
         }
-        function expcancel(){
-            document.getElementById("div1").className="left";
-            document.getElementById("div2").className="right";
-            document.getElementById("exform").style.display="none";
+        function showprojform() {
+            document.getElementById("div1").className += " " + "blur";
+            document.getElementById("div2").className += " " + "blur";
+            document.getElementById("projform").style.display = "block";
+        }
+        function expcancel() {
+            document.getElementById("div1").className = "left";
+            document.getElementById("div2").className = "right";
+            document.getElementById("exform").style.display = "none";
+        }
+        function pubcancel() {
+            document.getElementById("div1").className = "left";
+            document.getElementById("div2").className = "right";
+            document.getElementById("pubform").style.display = "none";
         }
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
             selectYears: 15 // Creates a dropdown of 15 years to control year
-          });
-        $(document).ready(function() {
+        });
+        $(document).ready(function () {
             $('select').material_select();
-          });
+        });
 
     </script>
 </head>
 <body id="top" class="scrollspy default_color">
 
-    <!--
+<!--
     Placeholder page.Things are working,my dear {{ user }}
     {% for job in jobs %}
         {{ job.location }} <br>
@@ -102,205 +130,313 @@
     {{ user.email }}<br>
     {{ details.gender }}<br>
     -->
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#">Edit Profile</a></li>
-        <li><a href="#">Help</a></li>
-        <li role="separator" class="divider"></li>
-        <li>
-            <li><a onclick="clickbut()">Logout</a></li>
-        </li>
-    </ul>
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#">Edit Profile</a></li>
+    <li><a href="#">Help</a></li>
+    <li role="separator" class="divider"></li>
+    <li>
+    <li><a onclick="clickbut()">Logout</a></li>
+    </li>
+</ul>
 
-    <div class="navbar-fixed">
-	    <nav id="nav_f" class="default_color" role="navigation">
-            <div class="nav-wrapper">
-	            <a href="#" id="logo-container" class="brand-logo">&nbsp; JustTheJob</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Notifications</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{user.first_name}} {{user.last_name}}<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-                </ul>
-	            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-            </div>
-	    </nav>
-	</div>
-    <hr>
-    <div class="left" id="div1">
-        <!--
+<div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="nav-wrapper">
+            <a href="#" id="logo-container" class="brand-logo">&nbsp; JustTheJob</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a class="dropdown-button" href="#!"
+                       data-activates="dropdown1">{{ user.first_name }} {{ user.last_name }}<i
+                        class="mdi-navigation-arrow-drop-down right"></i></a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
+    </nav>
+</div>
+<hr>
+<div class="left" id="div1">
+    <!--
         <span class="card-title black-text">Name: {{ user.first_name }} {{user.last_name}}</span>
         <p>faggot
         faggot
         faggot</p>
         -->
-        <div class="row">
-            <div class="col s12">
-              <ul class="tabs">
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
                 <li class="tab col s3"><a class="active black-text" href="#profiletab">Profile</a></li>
                 <li class="tab col s3"><a class="black-text" href="#experiencetab">Experience</a></li>
                 <li class="tab col s3"><a class="black-text" href="#educationtab">Education</a></li>
                 <li class="tab col s3"><a class="black-text" href="#projecttab">Projects</a></li>
-              </ul>
-            </div>
-            <div id="profiletab" class="col s12">
+                <li class="tab col s3"><a class="black-text" href="#publicationstab">Publications</a></li>
 
-            </div>
-            <div id="experiencetab" class="col s12">
-                <h4>Ordell Ugo</h4> <!-- company name-->
-                <h5>Member Technical Staff</h5> <!-- Title-->
-                <h6 class="teal-text">April 2014 - August 2014</h6>
-                <p><h6>Ordell Ugo is a virtual company that solves real world problems. I worked on a project titled "A Framework for Effective Management Of Mobility Based Entities using Real Time Data Management".</h6></p>
-                <button id="btn" class="red darken-1 waves-effect waves-light btn" onclick="showexform()">Add Position</button>
-            </div>
-            <div id="educationtab" class="col s12">
-                <h4>PES University</h4>
-                <h5>Degree: Bachelor's Degree</h5>
-                <h6>Field Of Study: Computer Science</h6>
-                <h6 class="teal-text">Dates Attended: 6-08-2013 - Present</h6>
-                <h5>CGPA: 9.003</h5>
-                <button id="edbtn" class="red darken-1 waves-effect waves-light btn" onclick="showedform()">Add Education</button>
-            </div>
-            <div id="projecttab" class="col s12">
-                <button id="projbtn" class="red darken-1 waves-effect waves-light btn" onclick="showprojform()">Add Project</button>
-            </div>
+            </ul>
         </div>
+        <div id="profiletab" class="col s12">
+            <h4>Name: {{ user.first_name }} {{ user.last_name }}</h4>
+            <h5>Address: {{ Personal.address }}</h5>
+            <h6>Phone number: {{ Personal.phone_number }}</h6>
+            <br>
+            <h6>Your skills:</h6>
 
-    </div>
-    <div class="right" id="div2" style="padding: 20px">
-        {% for job in jobs %}
-            <div class="card hoverable white">
-                <div class="card-content teal-text">
-                    <span class="card-title black-text">{{ job.industry }}</span>
-                    <p>{{job.position}}</p>
-                </div>
-                <div class="card-action">
-                    <a href="#" class="teal-text">Apply</a>
-                    <a href="#" class="red-text">Dismiss</a>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-    <div id="exform" class="white-text" style="display: none;">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="company_name" type="text" class="validate">
-                    <label for="company_name">Company Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="job_title" type="text" class="validate">
-                    <label for="job_title">Job Title</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <label for="TimePeriod">Time Period</label>
-                    <br><br>
-                    <input type="date" id="sdate" class="datepicker">
-                    -
-                    <input type="date" class="datepicker">
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="description" class="materialize-textarea"></textarea>
-                    <label for="description">description</label>
-                </div>
-            </div>
-            <div class="row" align="center">
-                <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
-                <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
-            </div>
-        </form>
-    </div>
-    <div id="projform" class="white-text" style="display: none; width: 400px;">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="project_name" type="text" class="validate">
-                    <label for="project_name">Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <label for="TimePeriod">Date</label>
-                    <br><br>
-                    <input type="date" id="projdate" class="datepicker">
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="project_url" type="url" class="validate">
-                    <label for="project_url">Project URL</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="proj_description" class="materialize-textarea"></textarea>
-                    <label for="proj_description">Description</label>
-                </div>
-            </div>
-            <div class="row" align="center" class="col s12">
-                <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
-                <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
-            </div>
-        </form>
-    </div>
-    <div id="edform" class="white-text" style="display: none;">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="school_name" type="text" class="validate">
-                    <label for="school_name">School Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <label for="TimePeriod">Dates Attended</label>
-                    <br><br>
-                    <input type="date" id="eddate" class="datepicker">
-                    -
-                    <input type="date" class="datepicker">
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <select>
-                        <option value="High School">High School</option>
-                        <option value="Pre-University">Pre-University</option>
-                        <option value="Bachelor's Degree">Bachelor's Degree</option>
-                        <option value="Master's Degree">Master's Degree</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="field_of_study" type="text" class="validate">
-                    <label for="field_of_study">Field Of Study</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="cgpa_percentage" type="text" class="validate">
-                    <label for="cgpa_percentage">CGPA/Percentage</label>
-                </div>
-            </div>
-            <div class="row" align="center">
-                <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
-                <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
-            </div>
-        </form>
-    </div>
-        <div id = "logout" style="display: none;">
-            <form method="post" action="test">
-                <input type="submit" id="logoutbut" value="Logout"/>
+            {% for skill in Personal.skills.all %}
+                <span>
+                     <div class="chip red darken-1 white-text">
+                         {{ skill.name }}
+
+                         <i class="material-icons" onclick="removeSkill('{{ skill.name }}')">close</i>
+                     </div>
+                    </span>
+
+            {% endfor %}
+            <form method="POST" action="test">
+                <input type="hidden" name="type" value="removeskill"/>
+                <input type="hidden" name="skillName" value="LOL" id="skillName"/>
+                <button type="submit" hidden id="removeForm"></button>
             </form>
+            <br>
+            <br>
+
+            <form action="test" method="POST">
+                <input type="hidden" name="type" value="addskill"/>
+                <input list="skills" name="skills" placeholder="Add Skill" style="width: 400px;">
+
+                <datalist id="skills">
+                    {% for skill in Skills %}
+                        <option value="{{ skill.name }}"></option>
+                    {% endfor %}
+                </datalist>
+                <button id="skillsbtn" type="submit" class="red darken-1 waves-effect waves-light btn">Add</button>
+            </form>
+
         </div>
+        <div id="experiencetab" class="col s12">
+            {% for p in PersonOrganization %}
+                <h4>{{ p.organization }}</h4> <!-- company name-->
+                <h5>Position: {{ p.title }}</h5> <!-- Title-->
+                <h6 class="teal-text">Duration: {{ p.startDate }} - {{ p.endDate }}</h6>
+                <hr>
+            {% endfor %}
+            <button id="btn" class="red darken-1 waves-effect waves-light btn" onclick="showexform()">Add Position
+            </button>
+
+        </div>
+        <div id="educationtab" class="col s12">
+            {% for e in Education %}
+                <h4>{{ e.name }}</h4>
+                <h5>Degree: {{ e.degree }}</h5>
+                <h6>Field Of Study: {{ e.field_of_study }}</h6>
+                <h6 class="teal-text">Graduation Year: {{ e.grad_year }}</h6>
+                <h5>CGPA: {{ e.score }}</h5>
+                <hr>
+            {% endfor %}
+            <button id="edbtn" class="red darken-1 waves-effect waves-light btn" onclick="showedform()">Add Education
+            </button>
+        </div>
+        <div id="projecttab" class="col s12">
+            {% for p in Project %}
+                <h4>{{ p.name }}</h4>
+                <h5>Duration: {{ p.duration }} months</h5>
+                <h6>Project URL: {{ p.url }}</h6>
+                <p>Description: {{ p.description }}</p>
+                <hr>
+            {% endfor %}
+            <button id="projbtn" class="red darken-1 waves-effect waves-light btn" onclick="showprojform()">Add
+                Project
+            </button>
+        </div>
+        <div id="publicationstab" class="col s12">
+            conference_name=models.CharField(max_length=100,null=False)
+            topic=models.CharField(max_length=100,null=False)
+            field_of_study=models.CharField(max_length=100,null=False)
+            author=models.ForeignKey(Personal)
+            {% for p in Publications %}
+                <h4>Topic: {{ p.topic }}</h4>
+                <h5>Conference Name: {{ p.conference_name }}</h5>
+                <h6>Field Of Study: {{ p.field_of_study }}</h6>
+                <h6>Date Published: {{ p.date_published }}</h6>
+                <hr>
+            {% endfor %}
+            <button id="pubbtn" class="red darken-1 waves-effect waves-light btn" onclick="showpubform()">Add
+                Publication
+            </button>
+        </div>
+    </div>
+
+</div>
+<div class="right" id="div2" style="padding: 20px">
+    {% for job in jobs %}
+        <div class="card hoverable white">
+            <div class="card-content teal-text">
+                <span class="card-title black-text">{{ job.industry }}</span>
+
+                <p>{{ job.position }}</p>
+            </div>
+            <div class="card-action">
+                <a href="#" class="teal-text">Apply</a>
+                <a href="#" class="red-text">Dismiss</a>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i
+                        class="material-icons right">close</i></span>
+
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<div id="exform" class="white-text" style="display: none;">
+    <form class="col s12" method="POST" action="/main/test">
+        <input type="hidden" value="PersonOrganization" name="type">
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="company_name" type="text" class="validate" name="organization">
+                <label for="company_name">Company Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="job_title" type="text" class="validate" name="title">
+                <label for="job_title">Job Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="TimePeriod">Time Period</label>
+                <br><br>
+                <input type="date" id="sdate" class="datepicker" name="startDate">
+                -
+                <input type="date" class="datepicker" name="endDate">
+            </div>
+        </div>
+        <div class="row" align="center">
+            <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
+            <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
+        </div>
+    </form>
+</div>
+<div id="projform" class="white-text" style="display: none; width: 400px;">
+    <form class="col s12" method="POST" action="/main/test">
+        <input type="hidden" value="Project" name="type">
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="project_name" type="text" class="validate" name="name">
+                <label for="project_name">Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="TimePeriod">Duration in Months</label>
+                <br><br>
+                <input type="range" id="projdate" min="1" max="36" name="duration">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="project_url" type="url" class="validate" name="url">
+                <label for="project_url">Project URL</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="proj_description" class="materialize-textarea" name="description"></textarea>
+                <label for="proj_description">Description</label>
+            </div>
+        </div>
+        <div class="row" align="center" class="col s12">
+            <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
+            <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
+        </div>
+    </form>
+</div>
+<div id="edform" class="white-text" style="display: none; width: 300px;">
+    <form class="col s12" method="POST" action="/main/test">
+        <input type="hidden" value="Education" name="type">
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="school_name" type="text" class="validate" name="name">
+                <label for="school_name">School Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="TimePeriod">Year of Graduation</label>
+                <br><br>
+                <input id="grad_year" type="text" class="validate" name="grad_year">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <select name="degree">
+                    <option value="H">High School</option>
+                    <option value="P">Pre-University</option>
+                    <option value="B">Bachelor's Degree</option>
+                    <option value="M">Master's Degree</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="field_of_study" type="text" class="validate" name="field_of_study">
+                <label for="field_of_study">Field Of Study</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="cgpa_percentage" type="text" class="validate" name="score">
+                <label for="cgpa_percentage">CGPA/Percentage</label>
+            </div>
+        </div>
+        <div class="row" align="center">
+            <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
+            <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
+        </div>
+    </form>
+</div>
+<div id="pubform" class="white-text" style="display: none; width: 400px;">
+    <form class="col s12" method="POST" action="/main/test">
+        <input type="hidden" value="Publications" name="type">
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="conference_name" type="text" class="validate" name="conference_name">
+                <label for="conference_name">Conference Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="topic" type="text" class="validate" name="topic">
+                <label for="topic">Topic</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="field_of_study" type="text" class="validate" name="field_of_study">
+                <label for="field_of_study">Field of Study</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="date_published">Date Published</label>
+                <br><br>
+                <input type="date" id="date_published" class="datepicker" name="date_published">
+            </div>
+        </div>
+        <div class="row" align="center" class="col s12">
+            <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
+            <button class="red darken-1 waves-effect waves-light btn" onclick="pubcancel()">Cancel</button>
+        </div>
+    </form>
+</div>
+<div id="logout" style="display: none;">
+    <form method="post" action="test">
+        <input type="hidden" value="Logout" name="type">
+        <input type="submit" id="logoutbut" value="Logout"/>
+    </form>
+</div>
 </body>
 </html>

@@ -24,6 +24,7 @@ class Personal(models.Model):
     phone_regex = RegexValidator(regex=r'^[0-9]{10}$', message="Phone number must be entered in the format: '9999999999'.")
     phone_number = models.CharField(max_length=10,validators=[phone_regex], blank=True)
     resume_url=models.CharField(max_length=100,null=True)
+    skills=models.ManyToManyField(Skill,null=True)
     def __str__(self):
         return self.user_details.username
 
@@ -32,7 +33,6 @@ class Personal(models.Model):
 class PersonOrganization(models.Model):
     startDate=models.DateField()
     endDate=models.DateField()
-    skills=models.ManyToManyField(Skill)
     person=models.ForeignKey(Personal,on_delete=models.CASCADE)
     organization=models.CharField(max_length=100,null=False)
     title=models.CharField(max_length=100, choices=TITLE_CHOICES, default='')                                  #Cannot get deleted
@@ -45,7 +45,7 @@ class Publications(models.Model):
     conference_name=models.CharField(max_length=100,null=False)
     topic=models.CharField(max_length=100,null=False)
     field_of_study=models.CharField(max_length=100,null=False)
-    author=models.OneToOneField(Personal)
+    author=models.ForeignKey(Personal)
     date_published=models.DateField()
     def __str__(self):
         return self.author.user_details.username+":"+self.conference_name
