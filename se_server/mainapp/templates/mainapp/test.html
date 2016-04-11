@@ -235,7 +235,7 @@
         <div id="educationtab" class="col s12">
             {% for e in Education %}
                 <h4>{{ e.name }}</h4>
-                <h5>Degree: {{ e.degree }}</h5>
+                <h5>Degree: {{ e.get_degree_display }}</h5>
                 <h6>Field Of Study: {{ e.field_of_study }}</h6>
                 <h6 class="teal-text">Graduation Year: {{ e.grad_year }}</h6>
                 <h5>CGPA: {{ e.score }}</h5>
@@ -257,10 +257,6 @@
             </button>
         </div>
         <div id="publicationstab" class="col s12">
-            conference_name=models.CharField(max_length=100,null=False)
-            topic=models.CharField(max_length=100,null=False)
-            field_of_study=models.CharField(max_length=100,null=False)
-            author=models.ForeignKey(Personal)
             {% for p in Publications %}
                 <h4>Topic: {{ p.topic }}</h4>
                 <h5>Conference Name: {{ p.conference_name }}</h5>

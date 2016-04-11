@@ -42,6 +42,7 @@ def fill_context(user):
     context['Project']=Project.objects.all().filter(person=p)
     context['Education']=Education.objects.all().filter(person=p)
     context["Skills"]=set(Skill.objects.all())-set(p.skills.all())
+    context["Publications"]=Publications.objects.all().filter(author=p)
     print(context)
     return context
 
@@ -132,6 +133,25 @@ def mainView(request):
             context['submitted'] = 2
             template = loader.get_template('mainapp/test.html')
             return HttpResponse(template.render(context,request))
+        elif(type=="Publications"):
+            c_n=data["conference_name"]
+            topic=data["topic"]
+            fos=data["field_of_study"]
+            date=data["date_published"]
+            person1=User.objects.all().filter(username=request.session.get('user'))[0]
+            person=Personal.objects.all().filter(user_details=person1)[0]
+            context={}
+            try:
+                p=Publications(conference_name=c_n,topic=topic,field_of_study=fos,date_published=date,author=person)
+                p.save()
+                context['submitted']=True
+            except(Exception) as e:
+                context['submitted']=str(e)
+            finally:
+                context.update(fill_context(person1))
+                template = loader.get_template('mainapp/test.html')
+                return HttpResponse(template.render(context,request))
+
     else:
         template = loader.get_template('mainapp/test.html')    #Load the page
         context={'user':request.session.get("user",None)}               #Used for alerting on feedback submission
