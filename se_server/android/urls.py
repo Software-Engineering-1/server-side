@@ -19,6 +19,8 @@ from django.contrib import admin
 from android import views
 urlpatterns = [
     url(r'login',views.login,name="LOGIN"),
+    url(r'register',views.register,name="REGISTER"),
+    url(r'chatbot_details',views.submit_chatbot_details,name="CHATBOT"),
 
     #url(r'register','authentication.views.register',name="Register"),
 ]
