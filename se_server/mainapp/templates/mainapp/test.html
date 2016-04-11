@@ -100,10 +100,20 @@
             document.getElementById("div2").className = "right";
             document.getElementById("exform").style.display = "none";
         }
+        function projcancel() {
+            document.getElementById("div1").className = "left";
+            document.getElementById("div2").className = "right";
+            document.getElementById("projform").style.display = "none";
+        }
         function pubcancel() {
             document.getElementById("div1").className = "left";
             document.getElementById("div2").className = "right";
             document.getElementById("pubform").style.display = "none";
+        }
+        function edcancel() {
+            document.getElementById("div1").className = "left";
+            document.getElementById("div2").className = "right";
+            document.getElementById("edform").style.display = "none";
         }
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
@@ -313,9 +323,13 @@
         </div>
         <div class="row" align="center">
             <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
-            <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
         </div>
     </form>
+    <div align="center">
+        <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()"
+                style="position: relative; bottom: 10px; ">Cancel
+        </button>
+    </div>
 </div>
 <div id="projform" class="white-text" style="display: none; width: 400px;">
     <form class="col s12" method="POST" action="/main/test">
@@ -348,9 +362,13 @@
         </div>
         <div class="row" align="center" class="col s12">
             <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
-            <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
         </div>
     </form>
+    <div align="center">
+        <button class="red darken-1 waves-effect waves-light btn" onclick="projcancel()"
+                style="position: relative; bottom: 10px; ">Cancel
+        </button>
+    </div>
 </div>
 <div id="edform" class="white-text" style="display: none; width: 300px;">
     <form class="col s12" method="POST" action="/main/test">
@@ -393,9 +411,13 @@
         </div>
         <div class="row" align="center">
             <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
-            <button class="red darken-1 waves-effect waves-light btn" onclick="expcancel()">Cancel</button>
         </div>
     </form>
+    <div align="center">
+        <button class="red darken-1 waves-effect waves-light btn" onclick="edcancel()"
+                style="position: relative; bottom: 10px; ">Cancel
+        </button>
+    </div>
 </div>
 <div id="pubform" class="white-text" style="display: none; width: 400px;">
     <form class="col s12" method="POST" action="/main/test">
@@ -428,9 +450,13 @@
         </div>
         <div class="row" align="center" class="col s12">
             <button type="submit" class="teal darken-1 waves-effect waves-light btn">Save</button>
-            <button class="red darken-1 waves-effect waves-light btn" onclick="pubcancel()">Cancel</button>
         </div>
     </form>
+    <div align="center">
+        <button class="red darken-1 waves-effect waves-light btn" onclick="pubcancel()"
+                style="position: relative; bottom: 10px; ">Cancel
+        </button>
+    </div>
 </div>
 <div id="logout" style="display: none;">
     <form method="post" action="test">
