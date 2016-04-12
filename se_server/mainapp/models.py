@@ -9,6 +9,7 @@ GENDER_CHOICES=[('M','Male'),('F','Female')]
 TITLE_CHOICES=[('Architectural and Engineering Managers', 'Architectural and Engineering Managers'), ('Auditors', 'Auditors'), ('Business Intelligence Analysts', 'Business Intelligence Analysts'), ('Business Teachers, Postsecondary', 'Business Teachers, Postsecondary'), ('Computer and Information Research Scientists', 'Computer and Information Research Scientists'), ('Computer and Information Systems Managers', 'Computer and Information Systems Managers'), ('Computer Hardware Engineers', 'Computer Hardware Engineers'), ('Computer Network Architects', 'Computer Network Architects'), ('Computer Network Support Specialists', 'Computer Network Support Specialists'), ('Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic', 'Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic'), ('Computer Programmers', 'Computer Programmers'), ('Computer Science Teachers, Postsecondary', 'Computer Science Teachers, Postsecondary'), ('Computer Systems Analysts', 'Computer Systems Analysts'), ('Computer User Support Specialists', 'Computer User Support Specialists'), ('Database Administrators', 'Database Administrators'), ('Electrical Engineering Technicians', 'Electrical Engineering Technicians'), ('Electronics Engineering Technicians', 'Electronics Engineering Technicians'), ('Engineering Teachers, Postsecondary', 'Engineering Teachers, Postsecondary'), ('Financial Quantitative Analysts', 'Financial Quantitative Analysts'), ('Graphic Designers', 'Graphic Designers'), ('Information Security Analysts', 'Information Security Analysts'), ('Mechatronics Engineers', 'Mechatronics Engineers'), ('Natural Sciences Managers', 'Natural Sciences Managers'), ('Operations Research Analysts', 'Operations Research Analysts'), ('Security Management Specialists', 'Security Management Specialists'), ('Software Developers, Applications', 'Software Developers, Applications'), ('Software Developers, Systems Software', 'Software Developers, Systems Software'), ('Telecommunications Engineering Specialists', 'Telecommunications Engineering Specialists'), ('Video Game Designers', 'Video Game Designers')]
 TYPE_CHOICES=[('I','Internship'),('F','Full Time')]
 DEGREE_CHOICES=[('H','High school'),('P','P U'),('M','Masters'),('B','Bachelors')]
+STATUS_CHOICES=[('A','Applied'),('S','Selected'),('X','Shortlisted'),('R','Rejected')]
 class Skill(models.Model):
     name=models.CharField(max_length=100,null=False,unique=True)
     id=models.AutoField(primary_key=True,unique=True)
@@ -79,3 +80,10 @@ class Education(models.Model):
     degree=models.CharField(max_length=100,choices=DEGREE_CHOICES)
     field_of_study=models.CharField(max_length=100)
     score=models.DecimalField(max_digits=6,decimal_places=2)
+
+class JobApplication(models.Model):
+    job=models.ForeignKey(JobPosting)
+    applicant=models.ForeignKey(Personal)
+    score=models.DecimalField(max_digits=6,decimal_places=2)
+    date=models.DateField(auto_now_add=True, blank=True)
+    status=models.CharField(max_length=1,choices=STATUS_CHOICES,default='A')

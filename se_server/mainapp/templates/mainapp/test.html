@@ -122,7 +122,11 @@
         $(document).ready(function () {
             $('select').material_select();
         });
-
+        function applyJob(name)
+        {
+            document.getElementById("name").value=name;
+            document.getElementById("apply").click();
+        }
     </script>
 </head>
 <body id="top" class="scrollspy default_color">
@@ -280,7 +284,12 @@
                 <p>{{ job.position }}</p>
             </div>
             <div class="card-action">
-                <a href="#" class="teal-text">Apply</a>
+                <form method="POST" action="quiz"  style="display: none;">
+
+                    <input type="hidden" name="type" value="" id="name">
+                    <input type="submit"  id="apply">
+                </form>
+                <a href="#" onclick="applyJob('{{ job.id }}')" class="teal-text">Apply</a>
                 <a href="#" class="red-text">Dismiss</a>
             </div>
             <div class="card-reveal">
