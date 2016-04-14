@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#f44336">
+    <title>JustTheJob</title>
+
+    <!-- CSS  -->
+    <link href="{{ STATIC_URL }}css/materialize.min.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        .brand-logo{position:absolute;color:#fff;display:inline-block;font-size:2.1rem;font-style:normal;font-weight:100;padding:0;letter-spacing:7px}
+    </style>
+    <script type="text/javascript">
+      function clickbut(){
+        alert('logout');
+      }
+    </script>
+    
+</head>
+<body class="grey lighten-4">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">JustTheJob</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a onclick="clickbut()">Logout</a></li>
+      </ul> 
+    </div>
+  </nav>
+</body>
+</html>
