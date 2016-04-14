@@ -28,5 +28,27 @@
       </ul> 
     </div>
   </nav>
+
+
+
+    {% for jobposting,applicants in jobpostings.items %}
+        JOB POSTING: {{ jobposting }} <br>
+        {% for applicant in applicants %}
+            {% for key,value in applicant.items %}
+                <h4 >{{ key }}</h4> :
+                {% if key == 'name' %}
+                <a href="#"> {{ value }} </a>
+                    {% else %}
+                        {{ value }}
+                {% endif %}
+
+            {% endfor %}
+        {% endfor %}
+        <br>
+    {% endfor %}
+
+
+
+
 </body>
 </html>

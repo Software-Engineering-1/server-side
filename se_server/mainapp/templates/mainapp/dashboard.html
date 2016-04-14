@@ -1,12 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>JustTheJob</title>
+
+    <!-- CSS  -->
+    <link href="{{ STATIC_URL }}min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}min/custom-min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/materialize.min.js"></script>
+    <style>
+        .linkButton {
+            background: none;
+            border: none;
+            color: #0066ff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .left {
+            width: 65%;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .right {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #div1 {
+            width: 800px;
+            background-color: white;
+            height: auto;
+        }
+
+        #exform, #edform, #projform, #pubform {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            background-color: teal;
+
+        }
+
+        .blur {
+            -webkit-filter: blur(10px);
+            -moz-filter: blur(10px);
+            -o-filter: blur(10px);
+            -ms-filter: blur(10px);
+            filter: blur(10px);
+        }
+
+    </style>
+    <script>
+        function clickbut() {
+            document.getElementById("logoutbut").click();
+        }
+        function removeSkill(name) {
+            var skillName = document.getElementById("skillName");
+            skillName.value = name;
+            document.getElementById("removeForm").click();
+        }
+        function showexform() {
+            document.getElementById("div1").className += " " + "blur";
+            document.getElementById("div2").className += " " + "blur";
+            document.getElementById("exform").style.display = "block";
+
+
+        }
+        function showedform() {
+            document.getElementById("div1").className += " " + "blur";
+            document.getElementById("div2").className += " " + "blur";
+            document.getElementById("edform").style.display = "block";
+        }
+        function showpubform() {
+            document.getElementById("div1").className += " " + "blur";
+            document.getElementById("div2").className += " " + "blur";
+            document.getElementById("pubform").style.display = "block";
+        }
+        function showprojform() {
+            document.getElementById("div1").className += " " + "blur";
+            document.getElementById("div2").className += " " + "blur";
+            document.getElementById("projform").style.display = "block";
+        }
+        function expcancel() {
+            document.getElementById("div1").className = "left";
+            document.getElementById("div2").className = "right";
+            document.getElementById("exform").style.display = "none";
+        }
+        function projcancel() {
+            document.getElementById("div1").className = "left";
+            document.getElementById("div2").className = "right";
+            document.getElementById("projform").style.display = "none";
+        }
+        function pubcancel() {
+            document.getElementById("div1").className = "left";
+            document.getElementById("div2").className = "right";
+            document.getElementById("pubform").style.display = "none";
+        }
+        function edcancel() {
+            document.getElementById("div1").className = "left";
+            document.getElementById("div2").className = "right";
+            document.getElementById("edform").style.display = "none";
+        }
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+        function applyJob(name)
+        {
+            document.getElementById("name").value=name;
+            document.getElementById("apply").click();
+        }
+    </script>
 </head>
-<body>
-    {% for j in Applications %}
-        {{ j.date }}
+<body id="top" class="scrollspy default_color">
+
+<!--
+    Placeholder page.Things are working,my dear {{ user }}
+    {% for job in jobs %}
+        {{ job.location }} <br>
+        {{ job.industry }} <br>
+        {{ job.position }} <br>
     {% endfor %}
+    {{ user.username }} <br>
+    {{ user.first_name }}<br>
+    {{ user.last_name }}<br>
+    {{ user.email }}<br>
+    {{ details.gender }}<br>
+    -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#">Edit Profile</a></li>
+    <li><a href="#">Help</a></li>
+    <li role="separator" class="divider"></li>
+    <li>
+    <li><a onclick="clickbut()">Logout</a></li>
+    </li>
+</ul>
+
+<div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="nav-wrapper">
+            <a href="#" id="logo-container" class="brand-logo">&nbsp; JustTheJob</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/main/test">Home</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a class="dropdown-button" href="#!"
+                       data-activates="dropdown1">{{ user.first_name }} {{ user.last_name }}<i
+                        class="mdi-navigation-arrow-drop-down right"></i></a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
+    </nav>
+</div>
+<hr>
+<div id="logout" style="display: none;">
+    <form method="post" action="/main/test">
+        <input type="hidden" value="Logout" name="type">
+        <input type="submit" id="logoutbut" value="Logout"/>
+    </form>
+</div>
+<br>
+  <h4 class="white-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Applications </h4>
+  <br>
+  <table id = "info" class="bordered striped centered ">
+    <thead>
+      <tr>
+          <th data-field="date">Date</th>
+          <th data-field="profile">Profile</th>
+          <th data-field="company">Company</th>
+          <th data-field="status">Application Status</th>
+          <th data-field="status">Quiz Score</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for j in Applications %}
+	      <tr>
+	        <td>{{ j.date }}</td>
+	        <td>{{ j.job.position }}</td>
+	        <td>{{ j.job.organization }}</td>
+	        <td>{{ j.get_status_display }}</td>
+	        <td>{{ j.score }}%</td>
+	      </tr>
+	  {% endfor %}
+    </tbody>
+  </table>
 </body>
 </html>
+<!--
+    {% for j in Applications %}
+        {{ j.date }}
+        {{ j.}}
+    {% endfor %}
+-->
