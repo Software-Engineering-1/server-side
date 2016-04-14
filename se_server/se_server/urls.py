@@ -22,7 +22,7 @@ urlpatterns = [
     #The pages associated with chatbot
     url(r'chat/',include('chatbot.urls')),
     url(r'main/',include('mainapp.urls')),
-
+    url(r'employer/',include("employers.urls")),
     url(r'^',include('authentication.urls')),
     url(r'android',include('android.urls')),
     #url(r'register','authentication.views.register',name="Register"),

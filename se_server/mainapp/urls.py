@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^test',views.mainView,name="test"),
     url(r'^quiz',views.quiz,name="quiz"),
     url(r'dashboard',views.dashboard,name="dashboard"),
+
 ]

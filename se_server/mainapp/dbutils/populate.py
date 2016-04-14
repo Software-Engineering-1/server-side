@@ -157,6 +157,26 @@ def populate_jobpostings(filename):
             j.save()
             print(str(j))
 
+from django.contrib.auth.models import User
+from employers.models import OpenPositions
+from django.contrib.auth import authenticate, login
+
+def populate_openpositions():
+    jobs=JobPosting.objects.all()
+    for job in jobs:
+        org=job.organization.replace(" ","_")
+        user=authenticate(username=org,password=org)
+        if(user is not None):
+            o=OpenPositions.objects.all().filter(owner=user)[0]
+            o.postings.add(job)
+            o.save()
+        else:
+            user=User.objects.create_user(org,org+"@"+org+".com",org)
+            o=OpenPositions(owner=user)
+            o.save()
+            o.postings.add(job)
+            o.save()
+
 
 
 if(__name__=="__main__"):
@@ -166,7 +186,8 @@ if(__name__=="__main__"):
     django.setup()
     #mappings=get_mappings("skills_big.csv")
     #populate_skills("skills_kai.csv")
-    populate_jobpostings("joble.csv")
+    #populate_jobpostings("joble.csv")
+    populate_openpositions()
     #
     #for s in Skill.objects.all():
      #   s.delete()
