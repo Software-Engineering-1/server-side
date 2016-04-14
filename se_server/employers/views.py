@@ -44,7 +44,14 @@ def home(request):
             single_app_context["date"]=app.date
             single_app_context["status"]=app.status
             app_contexts.append(single_app_context)
-        job_context[job.position]=app_contexts
+	pos=job.position
+	pos=pos.replace(" ","_")
+        job_context[pos]=app_contexts
+	#job_context["display_name"]=job.position
     context={'company-name':jobs.owner,'jobpostings':job_context}
     template=loader.get_template('employers/homepage.html')
     return HttpResponse(template.render(context,request))   #render the page
+
+@csrf_exempt
+def showresume(request):
+	return HttpResponse(request.POST["username"],status=200)

@@ -6,4 +6,5 @@ urlpatterns = [
     #The pages associated with chatbot
     url(r'login',views.login,name='Login'),
     url(r'home',views.home,name='Home'),
+    url(r'showresume',views.showresume,name='Home'),
 ]

@@ -9,6 +9,8 @@
 
     <!-- CSS  -->
     <link href="{{ STATIC_URL }}css/materialize.min.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/materialize.min.js"></script>
     <style type="text/css">
         .brand-logo{position:absolute;color:#fff;display:inline-block;font-size:2.1rem;font-style:normal;font-weight:100;padding:0;letter-spacing:7px}
     </style>
@@ -16,6 +18,13 @@
       function clickbut(){
         alert('logout');
       }
+        $(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+      function onclickbut(v){
+        document.getElementById("nig").value=v;
+        document.getElementById("submitbut").click();
+      }  
     </script>
     
 </head>
@@ -28,27 +37,54 @@
       </ul> 
     </div>
   </nav>
+  <br><br>
+    <div class="row">
+        <div class="col s12">
+          <ul class="tabs">
+          {% for jobposting,applicants in jobpostings.items %}
+            <li class="tab col s3"><a href="#{{ jobposting }}">{{ jobposting }}</a></li>
+          {% endfor %}
+          </ul>
+        </div>
+        {% for jobposting,applicants in jobpostings.items %}
+        <div id="{{ jobposting }}" class="col s12">
+          <h4 class="black-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Applications </h4>
+          <br>
+          <table id = "info" class="bordered striped centered ">
+            <thead>
+              <tr>
+                  <th data-field="date">Date</th>
+                  <th data-field="status">Application Status</th>
+                  <th data-field="status">Quiz Score</th>
+                  <th data-field="profile">Profile</th>
+              </tr>
+            </thead>
 
-
-
-    {% for jobposting,applicants in jobpostings.items %}
-        JOB POSTING: {{ jobposting }} <br>
-        {% for applicant in applicants %}
+            <tbody>
+            <tr>
+             {% for applicant in applicants %}
             {% for key,value in applicant.items %}
-                <h4 >{{ key }}</h4> :
+              <td>
                 {% if key == 'name' %}
-                <a href="#"> {{ value }} </a>
+                <a onclick="onclickbut('{{ value }}')"> {{ value }} </a>
                     {% else %}
                         {{ value }}
                 {% endif %}
-
+              </td>
             {% endfor %}
+            {% endfor %}
+        </tr>
+            </tbody>
+          </table>
+        </div>
         {% endfor %}
-        <br>
-    {% endfor %}
-
-
-
+      </div> 
+<div id="fag" style="display: none;">
+    <form method="post" action="showresume">
+        <input type="hidden" value="random" name="username" id="nig">
+        <input type="submit" id="submitbut" value="random"/>
+    </form>
+</div>
 
 </body>
 </html>
