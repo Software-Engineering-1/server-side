@@ -63,15 +63,20 @@
             <tbody>
             <tr>
              {% for applicant in applicants %}
-            {% for key,value in applicant.items %}
-              <td>
-                {% if key == 'name' %}
-                <a onclick="onclickbut('{{ value }}')"> {{ value }} </a>
-                    {% else %}
-                        {{ value }}
-                {% endif %}
-              </td>
-            {% endfor %}
+
+             <td>
+                {{ applicant.0 }}
+             </td>
+            <td>
+                {{ applicant.1 }}
+            </td>
+            <td>
+                {{ applicant.2 }}
+            </td>
+            <td>
+                <a onclick="onclickbut('{{ applicant.3 }}')"> {{ applicant.3 }} </a>
+            </td>
+
             {% endfor %}
         </tr>
             </tbody>

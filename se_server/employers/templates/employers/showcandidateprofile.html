@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Display cool things here
+
+            <h4>Name: {{ user.first_name }} {{ user.last_name }}</h4>
+            <h5>Address: {{ Personal.address }}</h5>
+            <h6>Phone number: {{ Personal.phone_number }}</h6>
+            <br>
+
+<!--
+    These are available. Scam from mainapp/test.html to loop / use them
+    context['user']=user
+    context['Personal']=p
+    context['PersonOrganization']=PersonOrganization.objects.all().filter(person=p)
+    context['Publication']=Publications.objects.all().filter(author=p)
+    context['Project']=Project.objects.all().filter(person=p)
+    context['Education']=Education.objects.all().filter(person=p)
+    context["Skills"]=set(Skill.objects.all())-set(p.skills.all())
+-->
+</body>
+</html>
