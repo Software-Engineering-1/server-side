@@ -107,17 +107,14 @@
         <div class="collapsible-header">Publications</div>
         <div class="collapsible-body">
             <div style="padding-left: 80px; padding-top: 3px;">
-                {% if publications == null %}
-                    <h4>No publications</h4>
-                {% else %}
-                    {% for p in Publications %}
+
+                    {% for p in Publication %}
                         <h4>Topic: {{ p.topic }}</h4>
                         <h5>Conference Name: {{ p.conference_name }}</h5>
                         <h6>Field Of Study: {{ p.field_of_study }}</h6>
                         <h6>Date Published: {{ p.date_published }}</h6>
                         <hr>
                     {% endfor %}
-                {% endif %}
             </div>
         </div>
     </li>

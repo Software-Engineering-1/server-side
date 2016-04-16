@@ -1,5 +1,17 @@
 import requests
+URL="http://127.0.0.1:8000/android"
 
-data={}
-r=requests.post("127.0.0.1:8000/android/login",data,data)
-print(r)
+#Run all possible tests
+
+r=requests.post(URL+"/login",data={'user_name':'kai123456','password':'kai123456'})
+print(r.text)
+
+r=requests.post(URL+"/login",data={'user_name':'kai12456','password':'kai123456'})
+print(r.text)
+
+r=requests.post(URL+"/login",data={'user_name':'kai123456','password':'kai1456'})
+print(r.text)
+
+r=requests.post(URL+"/login",data={'user_name':'kai123456'})
+print(r.text)
+

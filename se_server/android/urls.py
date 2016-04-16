@@ -21,6 +21,12 @@ urlpatterns = [
     url(r'login',views.login,name="LOGIN"),
     url(r'register',views.register,name="REGISTER"),
     url(r'chatbot_details',views.submit_chatbot_details,name="CHATBOT"),
+    url(r'add_skill',views.add_skill,name="ADD A NEW SKILL"),
+    url(r'remove_skill',views.remove_skill,name="REMOVE A SKILL"),
+    url(r'add_publication',views.add_publication,name="ADD PUBLICATION"),
+    url(r'add_person_organization',views.add_person_organization,name="ADD ORGANIZATION"),
+    url(r'add_project',views.add_project,name="ADD PROJECT"),
+    url(r'add_education',views.add_education,name="ADD EDUCATION"),
 
     #url(r'register','authentication.views.register',name="Register"),
 ]
