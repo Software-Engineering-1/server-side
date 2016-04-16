@@ -1,26 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% load staticfiles %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#f44336">
+    <title>JustTheJob</title>
+
+    <!-- CSS  -->
+    <link href="{{ STATIC_URL }}css/materialize.min.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/materialize.min.js"></script>
+    <style type="text/css">
+        .brand-logo {
+            position: absolute;
+            color: #fff;
+            display: inline-block;
+            font-size: 2.1rem;
+            font-style: normal;
+            font-weight: 100;
+            padding: 0;
+            letter-spacing: 7px
+        }
+    </style>
+
 </head>
-<body>
-    Display cool things here
+<body class="grey lighten-4">
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">JustTheJob</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a onclick="clickbut()">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<br><br>
+<ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+        <div class="collapsible-header active">Profile</div>
+        <div class="collapsible-body">
+            <div style="padding-left: 80px; padding-top: 3px;">
+                <h4>Name: {{ user.first_name }} {{ user.last_name }}</h4>
+                <h5>Address: {{ Personal.address }}</h5>
+                <h6>Phone number: {{ Personal.phone_number }}</h6>
+                <br>
+                <h6>Skills:</h6>
 
-            <h4>Name: {{ user.first_name }} {{ user.last_name }}</h4>
-            <h5>Address: {{ Personal.address }}</h5>
-            <h6>Phone number: {{ Personal.phone_number }}</h6>
-            <br>
+                {% for skill in Personal.skills.all %}
+                    <span>
+                     <div class="chip red darken-1 white-text">
+                         {{ skill.name }}
+                     </div>
+                    </span>
 
-<!--
-    These are available. Scam from mainapp/test.html to loop / use them
-    context['user']=user
-    context['Personal']=p
-    context['PersonOrganization']=PersonOrganization.objects.all().filter(person=p)
-    context['Publication']=Publications.objects.all().filter(author=p)
-    context['Project']=Project.objects.all().filter(person=p)
-    context['Education']=Education.objects.all().filter(person=p)
-    context["Skills"]=set(Skill.objects.all())-set(p.skills.all())
--->
+                {% endfor %}
+                <br>
+                <br>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header">Education</div>
+        <div class="collapsible-body">
+            <div style="padding-left: 80px; padding-top: 3px;">
+                {% for e in Education %}
+                    <h4>{{ e.name }}</h4>
+                    <h5>Degree: {{ e.get_degree_display }}</h5>
+                    <h6>Field Of Study: {{ e.field_of_study }}</h6>
+                    <h6 class="teal-text">Graduation Year: {{ e.grad_year }}</h6>
+                    <h5>CGPA: {{ e.score }}</h5>
+                    <hr>
+                {% endfor %}
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header">Experience</div>
+        <div class="collapsible-body">
+            <div style="padding-left: 80px; padding-top: 3px;">
+                {% for p in PersonOrganization %}
+                    <h4>{{ p.organization }}</h4> <!-- company name-->
+                    <h5>Position: {{ p.title }}</h5> <!-- Title-->
+                    <h6 class="teal-text">Duration: {{ p.startDate }} - {{ p.endDate }}</h6>
+                    <hr>
+                {% endfor %}
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header">Projects</div>
+        <div class="collapsible-body">
+            <div style="padding-left: 80px; padding-top: 3px;">
+                {% for p in Project %}
+                    <h4>{{ p.name }}</h4>
+                    <h5>Duration: {{ p.duration }} months</h5>
+                    <h6>Project URL: {{ p.url }}</h6>
+                    <p>Description: {{ p.description }}</p>
+                    <hr>
+                {% endfor %}
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header">Publications</div>
+        <div class="collapsible-body">
+            <div style="padding-left: 80px; padding-top: 3px;">
+                {% if publications == null %}
+                    <h4>No publications</h4>
+                {% else %}
+                    {% for p in Publications %}
+                        <h4>Topic: {{ p.topic }}</h4>
+                        <h5>Conference Name: {{ p.conference_name }}</h5>
+                        <h6>Field Of Study: {{ p.field_of_study }}</h6>
+                        <h6>Date Published: {{ p.date_published }}</h6>
+                        <hr>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </li>
+</ul>
+
 </body>
 </html>
