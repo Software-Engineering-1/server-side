@@ -3,18 +3,28 @@ from django.db import models
 
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
-
+import json
 
 GENDER_CHOICES=[('M','Male'),('F','Female')]
 TITLE_CHOICES=[('Architectural and Engineering Managers', 'Architectural and Engineering Managers'), ('Auditors', 'Auditors'), ('Business Intelligence Analysts', 'Business Intelligence Analysts'), ('Business Teachers, Postsecondary', 'Business Teachers, Postsecondary'), ('Computer and Information Research Scientists', 'Computer and Information Research Scientists'), ('Computer and Information Systems Managers', 'Computer and Information Systems Managers'), ('Computer Hardware Engineers', 'Computer Hardware Engineers'), ('Computer Network Architects', 'Computer Network Architects'), ('Computer Network Support Specialists', 'Computer Network Support Specialists'), ('Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic', 'Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic'), ('Computer Programmers', 'Computer Programmers'), ('Computer Science Teachers, Postsecondary', 'Computer Science Teachers, Postsecondary'), ('Computer Systems Analysts', 'Computer Systems Analysts'), ('Computer User Support Specialists', 'Computer User Support Specialists'), ('Database Administrators', 'Database Administrators'), ('Electrical Engineering Technicians', 'Electrical Engineering Technicians'), ('Electronics Engineering Technicians', 'Electronics Engineering Technicians'), ('Engineering Teachers, Postsecondary', 'Engineering Teachers, Postsecondary'), ('Financial Quantitative Analysts', 'Financial Quantitative Analysts'), ('Graphic Designers', 'Graphic Designers'), ('Information Security Analysts', 'Information Security Analysts'), ('Mechatronics Engineers', 'Mechatronics Engineers'), ('Natural Sciences Managers', 'Natural Sciences Managers'), ('Operations Research Analysts', 'Operations Research Analysts'), ('Security Management Specialists', 'Security Management Specialists'), ('Software Developers, Applications', 'Software Developers, Applications'), ('Software Developers, Systems Software', 'Software Developers, Systems Software'), ('Telecommunications Engineering Specialists', 'Telecommunications Engineering Specialists'), ('Video Game Designers', 'Video Game Designers')]
 TYPE_CHOICES=[('I','Internship'),('F','Full Time')]
 DEGREE_CHOICES=[('H','High school'),('P','P U'),('M','Masters'),('B','Bachelors')]
 STATUS_CHOICES=[('A','Applied'),('S','Selected'),('X','Shortlisted'),('R','Rejected')]
+
+
+class SkillManager(models.Manager):
+     def get_by_natural_key(self, name, id):
+        return self.get(name=name, id=id)
+
 class Skill(models.Model):
+    objects=SkillManager()
     name=models.CharField(max_length=100,null=False,unique=True)
     id=models.AutoField(primary_key=True,unique=True)
     def __str__(self):
         return str(self.id)+":"+self.name
+    def natural_key(self):
+        return (self.name,self.id)
+
 
 class Personal(models.Model):
     user_details=models.OneToOneField(User, on_delete=models.CASCADE)
@@ -28,8 +38,8 @@ class Personal(models.Model):
     skills=models.ManyToManyField(Skill,null=True)
     def __str__(self):
         return self.user_details.username
-
-
+    def natural_key(self):
+        return (self.user_details.username,)
 
 class PersonOrganization(models.Model):
     startDate=models.DateField()
@@ -51,6 +61,8 @@ class Publications(models.Model):
     def __str__(self):
         return self.author.user_details.username+":"+self.conference_name
 
+
+
 class JobPosting(models.Model):
     id=models.AutoField(primary_key=True)
     location=models.CharField(max_length=100)
@@ -63,6 +75,9 @@ class JobPosting(models.Model):
     stipend=models.IntegerField(null=True)
     def __str__(self):
         return str(self.id)+":"+self.position+":"+self.organization
+    def natural_key(self):
+        return {'id':self.id,'location':self.location,'industry':self.industry,'position':self.position,'organization':self.organization,'type':self.type,'stipend':self.stipend,'link':self.link}
+
 
 class Project(models.Model):
     person=models.ForeignKey(Personal)

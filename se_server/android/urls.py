@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'add_person_organization',views.add_person_organization,name="ADD ORGANIZATION"),
     url(r'add_project',views.add_project,name="ADD PROJECT"),
     url(r'add_education',views.add_education,name="ADD EDUCATION"),
+    url(r'get_details',views.get_details,name="GET DETAILS"),
 
     #url(r'register','authentication.views.register',name="Register"),
 ]
