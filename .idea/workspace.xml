@@ -4,9 +4,14 @@
     <list default="true" id="eafb4d35-5171-4591-8646-9c55907de4c3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/db.sqlite3" afterPath="$PROJECT_DIR$/se_server/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/android/urls.py" afterPath="$PROJECT_DIR$/se_server/android/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/android/test_endpoints/login_test.py" afterPath="$PROJECT_DIR$/se_server/android/test_endpoints/login_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/android/test_endpoints/test_details.py" afterPath="$PROJECT_DIR$/se_server/android/test_endpoints/test_details.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/android/views.py" afterPath="$PROJECT_DIR$/se_server/android/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/mainapp/models.py" afterPath="$PROJECT_DIR$/se_server/mainapp/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/employers/templates/employers/homepage.html" afterPath="$PROJECT_DIR$/se_server/employers/templates/employers/homepage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/employers/templates/employers/showcandidateprofile.html" afterPath="$PROJECT_DIR$/se_server/employers/templates/employers/showcandidateprofile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/employers/views.py" afterPath="$PROJECT_DIR$/se_server/employers/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/mainapp/templates/mainapp/test.html" afterPath="$PROJECT_DIR$/se_server/mainapp/templates/mainapp/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se_server/mainapp/views.py" afterPath="$PROJECT_DIR$/se_server/mainapp/views.py" />
     </list>
     <ignored path="server-side.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,9 +30,9 @@
     <SUITE FILE_PATH="coverage/server-side$chatbot_test.coverage" NAME="chatbot_test Coverage Results" MODIFIED="1460832332923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/android/test_endpoints" />
     <SUITE FILE_PATH="coverage/server-side$serialize_test.coverage" NAME="serialize_test Coverage Results" MODIFIED="1460874947064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/mainapp/dbutils" />
     <SUITE FILE_PATH="coverage/server-side$project_test.coverage" NAME="project_test Coverage Results" MODIFIED="1460833430613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/android/test_endpoints" />
-    <SUITE FILE_PATH="coverage/server-side$login_test.coverage" NAME="login_test Coverage Results" MODIFIED="1460827221063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/android/test_endpoints" />
+    <SUITE FILE_PATH="coverage/server-side$login_test.coverage" NAME="login_test Coverage Results" MODIFIED="1461141937891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/android/test_endpoints" />
     <SUITE FILE_PATH="coverage/server-side$populate.coverage" NAME="populate Coverage Results" MODIFIED="1460604088501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/mainapp/dbutils" />
-    <SUITE FILE_PATH="coverage/server-side$test_details.coverage" NAME="test_details Coverage Results" MODIFIED="1460875156671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/android/test_endpoints" />
+    <SUITE FILE_PATH="coverage/server-side$test_details.coverage" NAME="test_details Coverage Results" MODIFIED="1461141447113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/android/test_endpoints" />
     <SUITE FILE_PATH="coverage/server-side$education_test.coverage" NAME="education_test Coverage Results" MODIFIED="1460832671733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/android/test_endpoints" />
     <SUITE FILE_PATH="coverage/server-side$person_organization_test.coverage" NAME="person_organization_test Coverage Results" MODIFIED="1460833339202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/se_server/android/test_endpoints" />
   </component>
@@ -43,23 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se_server/mainapp/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-              <folding>
-                <element signature="e#1#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/se_server/android/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0841751">
-              <caret line="422" column="34" selection-start-line="422" selection-start-column="34" selection-end-line="422" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="378" column="56" selection-start-line="378" selection-start-column="56" selection-end-line="378" selection-end-column="56" />
               <folding>
                 <element signature="e#361#496#0" expanded="false" />
                 <element signature="e#549#804#0" expanded="false" />
@@ -71,72 +64,9 @@
                 <element signature="e#3122#3382#0" expanded="false" />
                 <element signature="e#3428#4287#0" expanded="false" />
                 <element signature="e#5577#6169#0" expanded="false" />
-                <element signature="e#6198#6737#0" expanded="false" />
-                <element signature="e#7701#8562#0" expanded="false" />
-                <element signature="e#10332#10591#0" expanded="false" />
+                <element signature="e#7826#8687#0" expanded="false" />
+                <element signature="e#10457#10716#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serialize_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/serialize_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="34" selection-start-line="16" selection-start-column="4" selection-end-line="66" selection-end-column="34" />
-              <folding>
-                <element signature="e#1#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testdump.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/testdump.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3988" column="1" selection-start-line="3988" selection-start-column="1" selection-end-line="3988" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se_server/employers/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="populate.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/populate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se_server/android/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_details.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/test_details.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -145,17 +75,87 @@
         <entry file="file://$PROJECT_DIR$/se_server/mainapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="66" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="66" />
+              <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/login_test.py">
+      <file leaf-file-name="QTest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/QTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="questionnaire.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/questionnaire.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se_server/employers/templates/employers/homepage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se_server/employers/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se_server/mainapp/templates/mainapp/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="372" column="65" selection-start-line="372" selection-start-column="16" selection-end-line="372" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/se_server/mainapp/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.83314794">
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showcandidateprofile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se_server/employers/templates/employers/showcandidateprofile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-21.764706">
+              <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se_server/mainapp/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -186,7 +186,6 @@
         <option value="$PROJECT_DIR$/se_server/mainapp/dbutils/questions.csv" />
         <option value="$PROJECT_DIR$/se_server/mainapp/static/js/skills_tutorials.js" />
         <option value="$PROJECT_DIR$/se_server/mainapp/templates/quiz/quiz.html" />
-        <option value="$PROJECT_DIR$/se_server/mainapp/views.py" />
         <option value="$PROJECT_DIR$/se_server/mainapp/urls.py" />
         <option value="$PROJECT_DIR$/se_server/se_server/urls.py" />
         <option value="$PROJECT_DIR$/se_server/se_server/settings.py" />
@@ -197,11 +196,7 @@
         <option value="$PROJECT_DIR$/se_server/employers/admin.py" />
         <option value="$PROJECT_DIR$/se_server/mainapp/dbutils/populate.py" />
         <option value="$PROJECT_DIR$/se_server/mainapp/templates/mainapp/dashboard.html" />
-        <option value="$PROJECT_DIR$/se_server/employers/views.py" />
-        <option value="$PROJECT_DIR$/se_server/employers/templates/employers/homepage.html" />
         <option value="$PROJECT_DIR$/se_server/employers/templates/employers/rules.html" />
-        <option value="$PROJECT_DIR$/se_server/mainapp/templates/mainapp/test.html" />
-        <option value="$PROJECT_DIR$/se_server/employers/templates/employers/showcandidateprofile.html" />
         <option value="$PROJECT_DIR$/se_server/android/test_endpoints/register_test.py" />
         <option value="$PROJECT_DIR$/se_server/android/test_endpoints/chatbot_test.py" />
         <option value="$PROJECT_DIR$/se_server/android/test_endpoints/add_skill_test.py" />
@@ -210,12 +205,18 @@
         <option value="$PROJECT_DIR$/se_server/android/test_endpoints/person_organization_test.py" />
         <option value="$PROJECT_DIR$/se_server/android/test_endpoints/project_test.py" />
         <option value="$PROJECT_DIR$/se_server/android/urls.py" />
-        <option value="$PROJECT_DIR$/se_server/android/test_endpoints/login_test.py" />
         <option value="$PROJECT_DIR$/se_server/mainapp/dbutils/serialize_tets.py" />
         <option value="$PROJECT_DIR$/se_server/mainapp/models.py" />
         <option value="$PROJECT_DIR$/se_server/mainapp/dbutils/serialize_test.py" />
-        <option value="$PROJECT_DIR$/se_server/android/views.py" />
+        <option value="$PROJECT_DIR$/se_server/mainapp/templates/mainapp/test.html" />
         <option value="$PROJECT_DIR$/se_server/android/test_endpoints/test_details.py" />
+        <option value="$PROJECT_DIR$/se_server/android/test_endpoints/login_test.py" />
+        <option value="$PROJECT_DIR$/se_server/android/views.py" />
+        <option value="$PROJECT_DIR$/se_server/employers/templates/employers/homepage.html" />
+        <option value="$PROJECT_DIR$/se_server/employers/views.py" />
+        <option value="$PROJECT_DIR$/se_server/employers/templates/employers/showcandidateprofile.html" />
+        <option value="$PROJECT_DIR$/se_server/mainapp/views.py" />
+        <option value="$PROJECT_DIR$/se_server/mainapp/dbutils/QTest.py" />
       </list>
     </option>
   </component>
@@ -255,6 +256,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -292,7 +294,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="se_server" />
+              <option name="myItemId" value="mainapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,6 +309,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="se_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-side" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server Side" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="se_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -440,11 +472,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webtech" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -452,11 +483,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KAI\PycharmProjects\Server Side\se_server\mainapp\dbutils" />
       <recent name="C:\Users\KAI\PycharmProjects\Server Side\se_server\mainapp\static\js" />
       <recent name="C:\Users\KAI\PycharmProjects\Server Side\se_server\mainapp\templates\mainapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_details">
+  <component name="RunManager" selected="Python.login_test">
     <configuration default="false" name="project_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -471,24 +503,6 @@
       <module name="server-side" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/se_server/android/test_endpoints/project_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="publication_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/se_server/android/test_endpoints" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="server-side" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/se_server/android/test_endpoints/publication_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -543,6 +557,24 @@
       <module name="server-side" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/se_server/mainapp/dbutils/serialize_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="login_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/se_server/android/test_endpoints" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="server-side" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/se_server/android/test_endpoints/login_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -742,18 +774,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.project_test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.publication_test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.person_organization_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_details" />
-      <item index="4" class="java.lang.String" itemvalue="Python.serialize_test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.person_organization_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_details" />
+      <item index="3" class="java.lang.String" itemvalue="Python.serialize_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.login_test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_details" />
-        <item index="1" class="java.lang.String" itemvalue="Python.serialize_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.project_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.person_organization_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.publication_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.login_test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_details" />
+        <item index="2" class="java.lang.String" itemvalue="Python.serialize_test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.project_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.person_organization_test" />
       </list>
     </recent_temporary>
   </component>
@@ -780,18 +812,18 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -807,39 +839,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/se_server/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/mainapp/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/mainapp/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/authentication/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/se_server/se_server/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -987,46 +991,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/employers/templates/employers/homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/mainapp/templates/mainapp/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7647059">
-          <caret line="270" column="12" selection-start-line="270" selection-start-column="12" selection-end-line="272" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/se_server/employers/templates/employers/rules.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.382353">
           <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/requests/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/employers/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/mainapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1037,34 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/chatbot_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/register_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/publication_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/person_organization_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/se_server/se_server/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1072,18 +1013,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/employers/templates/employers/showcandidateprofile.html">
+    <entry file="file://$PROJECT_DIR$/se_server/android/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="43" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/project_test.py">
+    <entry file="file://$PROJECT_DIR$/se_server/employers/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/populate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/testdump.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3988" column="1" selection-start-line="3988" selection-start-column="1" selection-end-line="3988" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/serialize_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="34" selection-start-line="16" selection-start-column="4" selection-end-line="66" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/android/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1096,7 +1064,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/2086803588/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33259177">
+          <caret line="517" column="4" selection-start-line="517" selection-start-column="4" selection-end-line="517" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/chatbot_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/person_organization_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/project_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/register_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/education_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/login_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/publication_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="27" />
@@ -1104,86 +1130,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/login_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/android/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/employers/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/populate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/mainapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-          <folding>
-            <element signature="e#1#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/mainapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="66" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/testdump.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3988" column="1" selection-start-line="3988" selection-start-column="1" selection-end-line="3988" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/serialize_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="34" selection-start-line="16" selection-start-column="4" selection-end-line="66" selection-end-column="34" />
-          <folding>
-            <element signature="e#1#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/se_server/android/test_endpoints/test_details.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/se_server/android/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0841751">
-          <caret line="422" column="34" selection-start-line="422" selection-start-column="34" selection-end-line="422" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="378" column="56" selection-start-line="378" selection-start-column="56" selection-end-line="378" selection-end-column="56" />
           <folding>
             <element signature="e#361#496#0" expanded="false" />
             <element signature="e#549#804#0" expanded="false" />
@@ -1195,10 +1153,81 @@
             <element signature="e#3122#3382#0" expanded="false" />
             <element signature="e#3428#4287#0" expanded="false" />
             <element signature="e#5577#6169#0" expanded="false" />
-            <element signature="e#6198#6737#0" expanded="false" />
-            <element signature="e#7701#8562#0" expanded="false" />
-            <element signature="e#10332#10591#0" expanded="false" />
+            <element signature="e#7826#8687#0" expanded="false" />
+            <element signature="e#10457#10716#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/employers/templates/employers/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/employers/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/mainapp/templates/mainapp/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="372" column="65" selection-start-line="372" selection-start-column="16" selection-end-line="372" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/employers/templates/employers/showcandidateprofile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.764706">
+          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/mainapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/questionnaire.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/mainapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/mainapp/dbutils/QTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se_server/mainapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83314794">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

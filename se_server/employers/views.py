@@ -47,6 +47,16 @@ def fill_context(user):
 
 @csrf_exempt
 def home(request):
+    if(request.method=="POST"):
+        st=(request.POST["F"])
+        jp=request.POST["jobposting"].split("_")[0]
+        person=request.POST["person"]
+        p=Personal.objects.all().filter(user_details=User.objects.all().filter(username=person)[0])
+        jp=JobPosting.objects.all().filter(id=jp)
+        j=JobApplication.objects.all().filter(job=jp,applicant=p)[0]
+        j.status=st
+        j.save()
+        print(j.status)
     owner=User.objects.all().filter(username=request.session.get('user'))[0]
     jobs=OpenPositions.objects.all().filter(owner=owner)[0]
     job_context={}
@@ -68,7 +78,7 @@ def home(request):
             single_app_context.append(app.applicant.user_details.username)
             app_contexts.append(single_app_context)
         pos=job.position
-        pos=pos.replace(" ","_")
+        pos=str(job.id)+"_"+pos.replace(" ","_")
         job_context[pos]=app_contexts
 	#job_context["display_name"]=job.position
     context={'company-name':jobs.owner,'jobpostings':job_context}
@@ -79,7 +89,9 @@ def home(request):
 def showresume(request):
     if(request.method=="POST" and request.POST.get("username",None)):
         person1=User.objects.all().filter(username=request.POST["username"])[0]
+        print(request.POST["jobposting"])
         context=fill_context(person1)
+        context["jobposting"]=request.POST["jobposting"]
         template=loader.get_template('employers/showcandidateprofile.html')
         return HttpResponse(template.render(context,request))   #render the page
     elif(request.session.get('user',None)):

@@ -242,7 +242,7 @@
                 <h5>Degree: {{ e.get_degree_display }}</h5>
                 <h6>Field Of Study: {{ e.field_of_study }}</h6>
                 <h6 class="teal-text">Graduation Year: {{ e.grad_year }}</h6>
-                <h5>CGPA: {{ e.score }}</h5>
+                <h5>SCORE: {{ e.score }}</h5>
                 <hr>
             {% endfor %}
             <button id="edbtn" class="red darken-1 waves-effect waves-light btn" onclick="showedform()">Add Education
@@ -279,7 +279,7 @@
     {% for job in jobs %}
         <div class="card hoverable white">
             <div class="card-content teal-text">
-                <span class="card-title black-text">{{ job.industry }}</span>
+                <span class="card-title black-text">{{ job.organization }}</span>
 
                 <p>{{ job.position }}</p>
             </div>

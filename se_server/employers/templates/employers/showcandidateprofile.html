@@ -120,5 +120,24 @@
     </li>
 </ul>
 
+<form method="POST" action="home"/>
+    <input type="hidden" name="person" value="{{ user.username }}">
+    <input type="hidden" name="jobposting" value="{{ jobposting }}">
+    <br>
+    <br>
+    <br>
+    <div align="center">
+    <button class="red darken-1 waves-effect waves-light btn" onclick="submitform('R')" value="R" name="F">REJECT</button>
+        <span style="margin-left: 50px"></span>
+    <button class="orange darken-1 waves-effect waves-light btn" onclick="submitform('X')" value="X" name="F">SHORTLIST</button>
+     <span style="margin-left: 50px"></span>
+    <button class="green darken-1 waves-effect waves-light btn" onclick="submitform('S')" value="S" name="F">SELECT</button>
+    </div>
+    <br>
+    <br>
+    <br>
+</form>
+
+
 </body>
 </html>

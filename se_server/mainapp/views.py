@@ -29,7 +29,6 @@ def check_permissions(main_function):
 
 
 
-
 def fill_context(user):
     context={}
     context['user']=user
@@ -41,8 +40,7 @@ def fill_context(user):
     ja=list(map(lambda x: x.job,JobApplication.objects.all().filter(applicant=p)))
 
     j=set(j)-set(ja)
-    j=list(j)[:5]
-    context['jobs']=j
+    context['jobs']=sorted(list(j),key=lambda x : len((set(x.skills.all())) & set(p.skills.all())),reverse=True)[:6]
     context['Project']=Project.objects.all().filter(person=p)
     context['Education']=Education.objects.all().filter(person=p)
     context["Skills"]=set(Skill.objects.all())-set(p.skills.all())
@@ -204,7 +202,7 @@ def quiz(request):
         """
         questions=[]
         skills=["JavaScript","C#","PHP"]
-        with open("mainapp/dbutils/questions.csv",encoding="UTF-8",errors="ignore") as csvfile:
+        with open("mainapp/dbutils/questionnaire.csv",encoding="UTF-8",errors="ignore") as csvfile:
             question={}
             reader=csv.reader(csvfile)
             next(reader)

@@ -21,8 +21,9 @@
         $(document).ready(function(){
     $('ul.tabs').tabs();
   });
-      function onclickbut(v){
+      function onclickbut(v,j){
         document.getElementById("nig").value=v;
+        document.getElementById("nig2").value=j;
         document.getElementById("submitbut").click();
       }  
     </script>
@@ -74,7 +75,7 @@
                 {{ applicant.2 }}
             </td>
             <td>
-                <a onclick="onclickbut('{{ applicant.3 }}')"> {{ applicant.3 }} </a>
+                <a onclick="onclickbut('{{ applicant.3 }}','{{ jobposting }}')"> {{ applicant.3 }} </a>
             </td>
 
             {% endfor %}
@@ -87,6 +88,7 @@
 <div id="fag" style="display: none;">
     <form method="post" action="showresume">
         <input type="hidden" value="random" name="username" id="nig">
+        <input type="hidden" value="random" name="jobposting" id="nig2">
         <input type="submit" id="submitbut" value="random"/>
     </form>
 </div>
