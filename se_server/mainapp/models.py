@@ -102,3 +102,15 @@ class JobApplication(models.Model):
     score=models.DecimalField(max_digits=6,decimal_places=2)
     date=models.DateField(auto_now_add=True, blank=True)
     status=models.CharField(max_length=1,choices=STATUS_CHOICES,default='A')
+
+class Question(models.Model):
+    skill=models.ForeignKey(Skill)
+    name=models.CharField(max_length=200)
+    optionA=models.CharField(max_length=200)
+    optionB=models.CharField(max_length=200)
+    optionC=models.CharField(max_length=200)
+    optionD=models.CharField(max_length=200)
+    answer=models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name

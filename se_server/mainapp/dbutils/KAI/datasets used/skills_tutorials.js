@@ -1,8 +1,9 @@
-skills_reco={"JavaScript": ["http://www.w3schools.com/js/","http://www.djsoutsourcing.com/js/wp-content/uploads/2015/10/javascript-Djs-Outsourcing.png"],
+skills_reco={"JavaScript": ["http://www.w3schools.com/js/","http://www.djsoutsourcing.com/js/
+								wp-content/uploads/2015/10/javascript-Djs-Outsourcing.png"],
 			 "Apache": ["http://httpd.apache.org/docs/2.0/misc/tutorials.html",
 						"http://ocean.infoproject.biz/ip/wp-content/uploads/2015/06/apache-logo.png"],
 			"PHP: Hypertext Preprocessor":["PHP: Hypertext Preprocessor","http://www.fuctura.com.br/wp-content/uploads/2011/09/php-elephant.jpg"],
-			  "Structured Query Language SQL":    ["http://www.tutorialspoint.com/sql/",
+			  "SQL":    ["http://www.tutorialspoint.com/sql/",
 						"http://divinitycomputing.com/wp-content/uploads/2015/12/mysql-logo.png"],
 		"Storage Servers": ["http://mymediaexperience.com/nas-storage-guide/",
 							"http://www.amsstorage.com/images/WinStore2012R2_logo.png"],
@@ -48,7 +49,7 @@ skills_reco={"JavaScript": ["http://www.w3schools.com/js/","http://www.djsoutsou
 					"Macintosh"                 : ["http://www.macforbeginners.com/",
 													"https://upload.wikimedia.org/wikipedia/en/b/b9/MacOS_original_logo.svg"],
 					"DOS"                        :["http://www.techiwarehouse.com/engine/21e82a84/DOS-Tutorial:-The-Basics",
-													"http://www.betaarchive.co.uk/imageupload/1223913231.or.63669.png"],
+													"http://www.betaarchive.co.uk/imageupload/1223913231.or.63669.png"]
 					"AutoCAD"                    :["http://www.cad-notes.com/autocad-articles/",
 													"https://justonyx.files.wordpress.com/2015/03/autocad-logo.jpg"],
 					"Verilog"                    :["http://www.asic-world.com/verilog/veritut.html",
@@ -67,57 +68,57 @@ skills_reco={"JavaScript": ["http://www.w3schools.com/js/","http://www.djsoutsou
 														"http://pdfextractoronline.com/wp-content/uploads/sites/26/2016/03/Collection-of-XML-documents.png"],
 					"Adobe Photoshop"             : ["https://helpx.adobe.com/photoshop/tutorials.html",
 														"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Adobe_Photoshop_CS6_icon.svg/2000px-Adobe_Photoshop_CS6_icon.svg.png"],
-
+					 
 					"Oracle"					  : ["http://www.tutorialspoint.com/listtutorials/oracle/1",
 														"http://fullhdpictures.com/wp-content/uploads/2016/02/Oracle-Logos.png"],
-
+		
 					"Microsoft Office"				: ["http://www.gcflearnfree.org/office",
 														"https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2000px-Microsoft_logo.svg.png"],
-
+		
 					"ERP System"					:["http://www.tutorialspoint.com/management_concepts/enterprise_resource_planning.htm",
 														"http://www.keysoft.ro/wp-content/uploads/2011/12/erp-logo.png"],
-
+		
 					"Microsoft Visual Basic"		:["http://www.tutorialized.com/tutorials/Visual-Basic/1",
 														"https://upload.wikimedia.org/wikipedia/commons/f/f9/Visual_Basic_for_Applications_logo_and_wordmark.svg"],
 					"SQL"                           :["http://www.tutorialspoint.com/sql/","http://4.bp.blogspot.com/--Z47AygFgro/Tgt5chuuhyI/AAAAAAAAY-c/RF6Wzj4tYnA/s1600/Mysql_Logo2.png"],
-
+		
 					"CAD Software"					:["http://www.cadtutor.net/tutorials/",
 														"http://scvrd.mrooms.net/file.php/1/program_logos/Computer-Aided-Drafting-Geographic-Information-Sustems.gif"],
-
+		
 					"MATLAB"						:["http://www.tutorialspoint.com/matlab/",
 														"http://www.fil.ion.ucl.ac.uk/spm/images/matlab.png"],
-
+		
 					"Microsoft .NET Frameworks"		:["http://vb.net-informations.com/framework/framework_tutorials.htm",
 														"http://1.bp.blogspot.com/-XvjzTLwUqbs/VOZItaU1PTI/AAAAAAAAAVY/Ds-jHBRcFTQ/s1600/net%2Bframework%2B4.5.png"],
-
+		
 					"Apache Hadoop"				:["https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html",
 														"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Hadoop_logo.svg/664px-Hadoop_logo.svg.png"],
-
+		
 					"ALGOL"							:["http://groups.engin.umd.umich.edu/CIS/course.des/cis400/algol/algol.html",
 														"http://www.conversant.fi/images/logo_algol.gif"],
 					"NoSQL"                     :["http://www.w3resource.com/mongodb/nosql.php","https://www.webair.com/wp-content/themes/webair_bm/images/logos/nosql.png"],
-
+		
 					"Oracle Java"							:["http://www.tutorialspoint.com/java/",
 														"https://upload.wikimedia.org/wikipedia/en/8/88/Java_logo.png"],
-
+		
 					"Extensible markup language XML"							:["http://www.w3schools.com/xml/",
 														"marcotello.com/wp-content/uploads/2014/01/xml-logo.png"],
-
+		
 					"Microsoft Visual C#"			:["http://csharp.net-tutorials.com/basics/visual-csharp-express/",
 														"http://blog.decarufel.net/wp-content/uploads/2014/07/csharp-logo.png"],
-
-					"Apache Tomcat"					:["http://www.vogella.com/tutorials/ApacheTomcat/article.html",
+		
+					"Apache Tomcat					:[http://www.vogella.com/tutorials/ApacheTomcat/article.html",
 														"http://www.userlogos.org/files/logos/fernandosantucci/logo.apache.tomcat.jpg"],
-
+		
 					"HTML"							:["http://www.tutorialspoint.com/html/",
 														"https://www.returngis.net/wp-content/uploads/2013/05/HTML-logo.jpg"],
-
+		
 					"Microsoft Windows"				:["http://windows.microsoft.com/en-in/windows/windows-basics-all-topics#1TC=windows-7",
 														"http://www.computilize.com/wp-content/uploads/2012/08/Microsoft_Old_Logo.jpg"],
-
+		
 					"Python"						:["http://www.tutorialspoint.com/python/",
 														"http://www.dexterindustries.com/wp-content/uploads/2013/04/python-logo.png"],
-
+		
 					"PERL"							:["http://www.tutorialspoint.com/perl/",
 														"https://www.buycpanel.com/wp-content/uploads/2015/07/perl-language-logo.png"],
 
@@ -126,7 +127,7 @@ skills_reco={"JavaScript": ["http://www.w3schools.com/js/","http://www.djsoutsou
 
 					"Autodesk"						:["https://www.lynda.com/Autodesk-training-tutorials/107-0.html",
 														"http://technoland.co.id/wp-content/uploads/2015/10/Autodesk-Logo.png"],
-
+		
 					"IBM Tools"						:["https://www.ibm.com/developerworks/tivoli/tutorials/",
 														"http://core0.staticworld.net/images/article/2015/01/012615blog-ibm-logo-100564825-primary.idge.jpg"],
 
@@ -135,9 +136,9 @@ skills_reco={"JavaScript": ["http://www.w3schools.com/js/","http://www.djsoutsou
 
 					"Adobe Dreamweaver"				:["http://www.tutorialspoint.com/listtutorials/dreamweaver/1",
 														"http://getintopc.com/wp-content/uploads/2014/02/Dewamweaver_CS53.png"],
-
+		
 					"Delphi software"				:["http://www.tutorialspoint.com/listtutorials/delphi/1",
 														"http://meautoparts.co.uk/images/Delphi_Logo.jpg"]
-
-
-					};
+					
+					
+					}		

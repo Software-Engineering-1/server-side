@@ -149,8 +149,9 @@ def populate_jobpostings(filename):
             position=row[4]
             duration=row[5]
             stipend=row[6]
-            url=row[8]
-            type=row[9]
+            url=row[7]
+            type=row[8]
+            print(row)
             j=JobPosting(id=count,organization=organization,location=location,industry=industry,link=url,type=type,stipend=int(stipend),position=position)
             j.save()
             j.skills.add(*skill_set)
@@ -167,15 +168,77 @@ def populate_openpositions():
         org=job.organization.replace(" ","_")
         user=authenticate(username=org,password=org)
         if(user is not None):
-            o=OpenPositions.objects.all().filter(owner=user)[0]
-            o.postings.add(job)
-            o.save()
+            o=OpenPositions.objects.all().filter(owner=user)
+            if(not o):
+                o=OpenPositions(owner=user)
+                o.save()
+                o.postings.add(job)
+                o.save()
+            else:
+                o=o[0]
+                o.postings.add(job)
+                o.save()
         else:
             user=User.objects.create_user(org,org+"@"+org+".com",org)
             o=OpenPositions(owner=user)
             o.save()
             o.postings.add(job)
             o.save()
+
+from mainapp.models import *
+def populate_questions(filename):
+    with open(filename,encoding="UTF-8",errors="ignore") as csvfile:
+        reader=csv.reader(csvfile)
+        next(reader)
+        for row in reader:
+            skill=row[0]
+            s=Skill.objects.all().filter(name=skill)
+            if(not s):
+                continue
+            s=s[0]
+            q=Question(skill=s,name=row[1],optionA=row[2],optionB=row[3],optionC=row[4],optionD=row[5],answer=row[6])
+            q.save()
+
+
+def add_skills(slist,skillList):
+    toAdd=[]
+    for skill in slist:
+        if(Skill.objects.all().filter(name=skill)):
+            pass
+        else:
+            if(skill in skillList):
+                s=skillList[skill]
+                skill=Skill(name=skill)
+                skill.save()
+                toAdd.append(skill)
+            else:
+                print("SKIPPING",skill)
+    return toAdd
+
+def populate_skills_and_jobpostings(skillfilename,jobfilename):
+    skills={}
+    with(open(skillfilename)) as csvfile:
+        reader=csv.reader(csvfile)
+        for row in reader:
+            skills[row[1].strip()]=1
+    print(skills)
+    with open(jobfilename) as csvfile:
+        reader=csv.reader(csvfile)
+        next(reader)
+        for row in reader:
+            skill_list=row[3].split(",")
+            print(skill_list)
+            skill_list=list(map(lambda x:x.strip(),skill_list))
+            toAdd=add_skills(skill_list,skills)
+            j=JobPosting(location=row[1],industry=row[2],position=row[4],organization=row[0],link=row[7],type=row[8],stipend=int(row[6]))
+            j.save()
+            j.skills.add(*toAdd)
+            j.save()
+            print("ADDED",j)
+
+
+
+
 
 
 
@@ -184,11 +247,12 @@ if(__name__=="__main__"):
     os.environ.setdefault('DJANGO_SETTINGS_MODULE','justthejob.settings')
     import django
     django.setup()
+    #populate_jobpostings("jl.csv")
     #mappings=get_mappings("skills_big.csv")
-    #populate_skills("skills_kai.csv")
-    #populate_jobpostings("joble.csv")
+    #populate_skills_and_jobpostings("./KAI/datasets used/skills_big.csv","./KAI/datasets used/job listings_less_skills.csv")
+    #populate_jobpostings("./KAI/datasets used/job listings_less_skills.csv")
     populate_openpositions()
-    #
+    #populate_questions("./KAI/datasets used/questionnaire.csv")
     #for s in Skill.objects.all():
      #   s.delete()
     #populate_skills("skills_kai.csv")

@@ -185,36 +185,44 @@ class Question:
         self.question=question
         self.choices=choices
         self.correct=correct
-
+    def __str__(self):
+        return(self.skill+self.question)
 import csv
 @csrf_exempt
 def quiz(request):
     if(request.method=="POST"):
         data=request.POST
         job_id=data["type"]
-        j=JobPosting.objects.all().filter(id=job_id)[0]
-        """
-        skills=j.skills.all()
+        p=Personal.objects.all().filter(user_details=User.objects.all().filter(username=request.session['user'])[0])[0]
+        skills=p.skills.all()
         import random
-        random.shuffle(skills)
+        random.shuffle(list(skills))
         skills=skills[:3]
-        skills=list(map(lambda x:x.name,skills))
-        """
         questions=[]
-        skills=["JavaScript","C#","PHP"]
-        with open("mainapp/dbutils/questionnaire.csv",encoding="UTF-8",errors="ignore") as csvfile:
-            question={}
-            reader=csv.reader(csvfile)
-            next(reader)
-            count=0
-            for row in reader:
-                if(count==4):
-                    break
-                if(row[0] in skills):
-                    questions.append(Question(row[0],row[1],[row[2],row[3],row[4],row[5]],row[6]))
-                    count+=1
+        for skill in skills:
+            q=skill.question_set.all()
+            if(len(q)==0):
+                print("EMPTY FOR ",skill)
+            else:
+                questions.extend(list(q))
+        qs=[]
+        for question in questions:
+            choices=[question.optionA,question.optionB,question.optionC,question.optionD]
+            q=Question(question.skill.name,question.name,choices,question.answer)
+
+            try:
+                print(q.skill,q.question,q.choices,q.correct)
+                qs.append(q)
+            except:
+                pass
+        random.shuffle(list(set(qs)))
+        for q in qs:
+            q.question=q.question.replace("\n"," ")
+            print(q.question,q.skill)
+        random.shuffle(list(set(qs)))
+        print(qs)
         template = loader.get_template('quiz/quiz.html')    #Load the page
-        context={'questions':questions,'job_id':job_id}               #Used for alerting on feedback submission
+        context={'questions':qs,'job_id':job_id}               #Used for alerting on feedback submission
         return HttpResponse(template.render(context,request))
 
 

@@ -1,0 +1,69 @@
+Skill,Question ,Option A,Option B,Option C ,Option D,Correct 
+JavaScript,Which is the storage that allows the caching of web pages and their associated resources?,Web Databases,FileSystem API,Offline Web Applications,All of the mentioned,Offline Web Applications
+JavaScript,The localStorage and sessionStorage belongs to,Window object,Element object, Hash object,DOM object,Window object
+JavaScript,Which of the following is not an object?,Element,Location,Position,Window,Position
+JavaScript,The word documentationù mainly refers to,Dynamic Information,Static Information,Both a and b,None of the mentioned,Static Information
+JavaScript,Which handler is triggered when the content of the document in the window is stable and ready for manipulation?,onload,manipulate,create,None of the mentioned,onload
+JavaScript,The setTimeout() method is used to,Make the event sleep,Register a function to be invoked after a certain time,Invoke an event after a certain time,Time for iteration,Register a function to be invoked after a certain time
+JavaScript,Which object is the main entry point to all client-side JavaScript features and APIs?,Standard,Location,Window,Position,Window
+JavaScript,What are the properties supporting CSS styles for a document element?,style and font,style and className,size and style,className and font,style and className
+Structured query language SQL,Which command undo all the updates performed by the SQL in the transaction?,ROLLBACK,COMMIT,TRUNCATE,DELETE,ROLLBACK
+Structured query language SQL,"In SQL, which command is used to SELECT only one copy of each set of duplicable rows",SELECT DISTINCT,SELECT UNIQUE,SELECT DIFFERENT,All of the above,SELECT DISTINCT
+Structured query language SQL,"In SQL, which command(s) is(are) used to change a table's storage characteristics?",ALTER TABLE,MODIFY TABLE,CHANGE TABLE,All of the above,ALTER TABLE
+Structured query language SQL,Which of the SQL statements is correct,SELECT Username AND Password FROM Users,"SELECT Username, Password FROM Users","SELECT Username, Password WHERE Username = 'user1'",None of these,"SELECT Username, Password FROM Users"
+Structured query language SQL,Which operator performs pattern matching?,BETWEEN operator,LIKE operator,EXISTS operator,None of these,LIKE operator
+Structured query language SQL,What operator tests column for the absence of data?,EXISTS operator,NOT operator,IS NULL operator,one of these,IS NULL operator
+C#,Which of the following statements is correct about properties used in C#.NET?,A property can simultaneously be read only or write only.,A property can be either read only or write only.,A write only property will have only get accessor.,A write only property will always return a value,A property can be either read only or write only.
+C#,Which of the following is an 8-byte Integer?,Char,Long,Short,Byte,Long
+C#,Which of the following is NOT a .NET Exception class?,Exception,StackMemoryException,DivideByZeroException,OutOfMemoryException,StackMemoryException
+C#,Which of the following statements is valid about generic procedures in C#.NET?,All procedures in a Generic class are generic.,Only those procedures labeled as Generic are generic.,Generic procedures can take at the most one generic parameter.,Generic procedures must take at least one type parameter.,Generic procedures must take at least one type parameter.
+C#,In C#.NET if we do not catch the exception thrown at runtime then which of the following will catch it?,Compiler,CLR,Linker,Loader,CLR
+C#,Which of the following does not store a sign?,Short,Integer,Long,Byte,Byte
+PHP: Hypertext Preprocessor,Which one of the following PHP functions can be used to build a function that accepts any number of arguments?,func_get_argv(),func_get_argc(),get_argv(),get_argc() ,func_get_argc()
+PHP: Hypertext Preprocessor,Which of following commenting is supported by Php,Single line c++ syntax - //,Shell syntax - #,Both of above,None of above,Both of above
+PHP: Hypertext Preprocessor,Which one of the following is the right way of defining a function in PHP?,function { function body },data type functionName(parameters) { function body },functionName(parameters) { function body },function functionName(parameters) { function body } ,function functionName(parameters) { function body } 
+PHP: Hypertext Preprocessor,Which one of the following PHP functions can be used to find files?,glob(),file(),fold(),get_file() ,glob()
+PHP: Hypertext Preprocessor,Select the incorrect statement about PHP programming language,Classes are case-insensitive,Functions rae case-insensitive,Variables are case-insensitive,Constants are case-sensitive,Variables are case-insensitive
+PHP: Hypertext Preprocessor,Which one of the following function is capable of reading a file into an array?,file(),arrfile(),arr_file(),file_arr() ,file()
+PHP: Hypertext Preprocessor,What does PHP stand for?,Personal Home Page,Hypertext Preprocessor,Pretext Hypertext Processor,Preprocessor Home Page,"a,b "
+Oracle DBA,SNAPSHOT is used for [DBA],Synonym,Table space,System server,Dynamic data representation,Dynamic data representation
+Oracle DBA,We can create SNAPSHOTLOG for[DBA],Simple snapshots,Complex snapshots,Both A & B,Neither A nor B,Simple snapshots
+Oracle DBA,LGWR process writes information into,Database files,Control files,Redolog files,All the above.,Redolog files
+Oracle DBA,Databases overall structure is maintained in a file called,Redolog file,Data file,Control file,All of the above,Control file
+Oracle DBA,Transactions per rollback segment is derived from[DBA],Db_Block_Buffers,"Processes,","Shared_Pool_Size,",None of the above,Processes
+Oracle DBA,What is the difference between a MESSAGEBOX and an ALERT,A messagebox can be used only by the system and cannot be used in user application while an†alert can be used in user application also.,A alert can be used only by the system and cannot be used in user application while a messagebox can be used in user application,An alert requires an response from the userwhile a messagebox just flashes a message and only requires an acknowledgement from the user,An message box requires an response from the userwhile a alert just flashes a message and only requires an acknowledgement from the user,An alert requires an response from the userwhile a messagebox just flashes a message and only requires an acknowledgement from the user
+Oracle DBA,What is the difference between a LIST BOX and a COMBO BOX ?,"In the list box, the user is restricted to selecting a value from a list but in a combo box the user can type in the value which is not in the list",A list box is a data entry area while a combo box can be used only for control purposes,"In a combo box, the user is restricted to selecting a value from a list but in a list box the user can type in the values which are not in the list",None of the above,"In the list box, the user is restricted to selecting a value from a list but in a combo box the user can type in the value which is not in the list"
+Oracle DBA,Which of the following is not an advantage of a client/server model ?,A client/server model allows centralised control of data and centralised implementation of business rules,A client/server model increases developers productivity,A client/server model is suitable for all applications,None of the above,A client/server model is suitable for all applications
+Oracle DBA,What does DLL stands for ?,Dynamic Language Library,Dynamic Link Library,Dynamic Load Library,None of the above,Dynamic Link Library
+jQuery,Which jQuery method is used to perform an asynchronous HTTP request?,jQuery.ajaxAsync(),jQuery.ajax(),jQuery.ajaxSetup(),,jQuery.ajax()
+jQuery,Which statement is true?,"To use jQuery, you must buy the jQuery library at www.jquery.com","To use jQuery, you do not have to do anything. Most browsers (Internet Explorer, Chrome, Firefox and Opera) have the jQuery library built in the browser","To use jQuery, you can refer to a hosted jQuery library at Google",,"To use jQuery, you must buy the jQuery library at www.jquery.com"
+jQuery,What scripting language is jQuery written in?,VBScript,Javascript,c#,c++,Javascript
+jQuery,"Which jQuery function is used to prevent code from running, before the has finished loading?",$(document).load(),$(document).ready(),$(body).onload(),,$(body).onload()
+jQuery,Which jQuery method should be used to deal with name conflicts?,noNameConflict(),noConflict(),nameConflict(),conflict(),conflict()
+jQuery,Which jQuery method is used to switch between adding/removing one or more classes (for CSS) from selected elements?,toggleClass(),switch(),altClass(),switchClass(),switchClass()
+jQuery,"Which statement best explains what ""unobtrusive JavaScript"" is?",JavaScript that doesn't annoy users,JavaScript that is separate from HTML,JavaScript that does not affect a web page,JavaScript that works even with scripting turned off,JavaScript that is separate from HTML
+jQuery,Which of these is NOT a valid comment in JavaScript?,// This is a comment,/* This is a comment. */,/* This is a comment,.<!-- This is a comment.,/* This is a comment
+jQuery,"In JavaScript, we can keep a reference to the context outside a function by assigning it to a variable: var self = this. In CoffeeScript, we use:",self = this printScope -> console.log self,printScope => console.log @,printScope => console.log this,All of the above,All of the above.
+jQuery,"What is the correct JavaScript syntax to write ""Hello World""?","document.write(""Hello World"")","(""Hello World"")","response.write(""Hello World"")",Hello World,"document.write(""Hello World"")"
+jQuery,jQuery is a...,JavaScript library,Ruby gem,PHP Framework,None of the above,JavaScript library
+jQuery,jQuery's main focus is..,AJAX,DOM Manipulation,Animations,All of the above,All of the above
+jQuery,$.foo() is equivalent to..,javascript.foo(),document.foo(),jQuery.foo(),None of the above,jQuery.foo()
+jQuery,"var ps = $(""p""); ps will be..",A linked list,A hash or dictionary,An array,A jQuery object,A jQuery object
+R,Choose the data objects in R from the following choices,vectors ,lists ,arrays,All of the above,All of the above
+R,Which function is used to load and read a csv file?,read.csv(),read(),reader.csv(),readcsv(),read.csv()
+R,Output of runif(4),Random numbers between 0 and 1,Random numbers,Random numbers between 0 and 4,None of the above,Random numbers between 0 and 1
+R,Which function is used to transpose matrix in R ?,transpose(),transpose.matrix(),t(),trans(),t()
+Cascading Style Sheets CSS,Where in an HTML document is the correct place to refer to an external style sheet?,In the <head> section,At the top of the document,In the <body> section,At the end of the document,In the <head> section
+Cascading Style Sheets CSS,Which HTML tag is used to define an internal style sheet?,<style>,<strong>,<script>,<css>,<style>
+Cascading Style Sheets CSS,How do you change the text color of an element?,color;,text-color;,text-color=;,fgcolor;,text-color=;
+Cascading Style Sheets CSS,How do you change the font of an element?,font;,font-family;,font-fam;,None of the above,font-family;
+Extensible markup language XML,Is it easier to process XML than HTML?,yes ,no ,Sometimes,Cant Say,yes
+Extensible markup language XML,Kind of Parsers are,well-formed,well-documented,non validating and validating,None of the above,non validating and validating
+Extensible markup language XML,Which of the following strings are a correct XML name?,xmlExtenstion,xslNewElement,XMLELEMENT,None of the above,xslNewElement
+Oracle Java,"You want subclasses in any package to have access to members of a superclass.
+  Which is the most restrictive access that accomplishes this objective?
+",public,private,protected,transient,protected
+Oracle Java,What is the name of the method used to start a thread execution?,init();,start();,run();,resume();,start();
+Oracle Java,Which one is a valid declaration of a boolean?,boolean b1 = 0;,boolean b2 = 'false';,boolean b3 = false;,boolean b4 = Boolean.false();,boolean b3 = false;
+Oracle Java,Which of the following is/are advantages of packages?,Packages avoid name clashes,"Classes, even though they are visible outside their package, can have fields visible to packages only","We can have hidden classes that are used by the packages, but not visible outside.",All of the above,All of the above
+Oracle Java,"Which class or interface defines the wait(), notify(),and notifyAll() methods?",Object,,Runnable,Class,Object
